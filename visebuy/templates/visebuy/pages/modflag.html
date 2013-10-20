@@ -1,0 +1,44 @@
+  <div class="category_sub">
+<h2>如果你在这里，您可能关闭了JavaScript或CSS。下面列出了几种方法，你可以使用我们的搜索引擎。</h2>
+
+<h3>图片上传</h3>
+<form enctype="multipart/form-data" action="<?php echo Uri::create('search/create'); ?>" method="POST">
+  <input name="uploadedfile" type="file" />
+    <input type="radio" name="modflag" value="0">0
+  <input type="radio" name="modflag" value="1">1
+  <input type="radio" name="modflag" value="2">2
+  <input type="submit" value="Upload" />
+</form>
+
+<h3>网址上传</h3>
+<form action="<?php echo Uri::create('search/create'); ?>" method="post" accept-charset="utf-8">
+  <label for="q">Search for:</label>
+  <input type="text" name="q" title="<?php print (isset($searched_query)) ? $searched_query : "搜索图像和文本" ?>" placeholder="<?php print (isset($searched_query)) ? $searched_query : "搜索图像和文本" ?>" value="" id="urlsearch">
+    <input type="radio" name="modflag" value="0">0
+  <input type="radio" name="modflag" value="1">1
+  <input type="radio" name="modflag" value="2">2
+  <input type="submit" value="Continue &rarr;">
+</form>
+
+<h3>ID</h3>
+<form action="<?php echo Uri::create('search/create'); ?>" method="get" accept-charset="utf-8">
+  <label for="q">Search for:</label>
+  <input type="text" name="id" title="<?php print (isset($searched_query)) ? $searched_query : "Image ID" ?>" placeholder="<?php print (isset($searched_query)) ? $searched_query : "Image ID" ?>" value="" id="urlsearch">
+  <!--<input type="text" name="url" title="<?php print (isset($searched_query)) ? $searched_query : "URL" ?>" placeholder="<?php print (isset($searched_query)) ? $searched_query : "URL" ?>" value="" id="urlsearch">-->
+    <input type="radio" name="modflag" value="0">0
+  <input type="radio" name="modflag" value="1">1
+  <input type="radio" name="modflag" value="2">2
+  <input type="submit" value="Continue &rarr;">
+</form>
+
+<h3>全文搜索</h3>
+<form action="<?php echo Uri::create('search/create'); ?>" method="post" accept-charset="utf-8">
+  <label for="q">Search for:</label>
+  <input type="text" placeholder="<?php print (isset($searched_query)) ? $searched_query : "搜索图像和文本" ?>" title="<?php print (isset($searched_query)) ? $searched_query : "搜索图像和文本" ?>" name="q" value="" id="q">
+    <input type="radio" name="modflag" value="0">0
+  <input type="radio" name="modflag" value="1">1
+  <input type="radio" name="modflag" value="2">2
+  <input type="submit" value="Continue &rarr;">
+</form>
+
+</div>

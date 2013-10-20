@@ -1,0 +1,177 @@
+<ul id="navis">
+	<li>
+	<a href="#<?php //echo Uri::create('search/category/'); ?>">所有类别</a>
+		<div id="all_lists">
+		{% comment %}<?php //{% endcomment %}<h3>类别</h3> {% comment %}?>{% endcomment %}
+		<ul class="top_list">
+		<li>
+			<a href="{% comment %}<?php echo Uri::create('/search/gender/:g', array('g' => '女')); ?>{% endcomment %}">女鞋</a>
+			<span>></span>
+			<ul class="sub_list" style="top:-12px;">
+{#				<?php // for each category under female ?>#}
+{#				<?php foreach ($category_list['女'] as $cat => $a): ?>#}
+{#				<?php // create search in that category ?>#}
+				<h4><a href="{% comment %}<?php echo Uri::create('/search/category/:cat', array('cat' => $cat)); ?>{% endcomment %}">
+{#					<?php echo $cat ?></a>#}
+				</h4>
+				<ul>
+{#					<?php // for each style under that category ?>#}
+{#					<?php foreach ($a as $style): ?>#}
+{#					<?php // create search in that category with that style filter applied ?>#}
+					<li><a href="{% comment %}<?php echo Uri::create('/search/category/:cat?style=:s',
+						array('cat' => $cat, 's' => $style)); ?>{% endcomment %}">
+						{% comment %}<?php echo $style ?>{% endcomment %}</a>
+					</li>
+{#					<?php endforeach; ?>#}
+				</ul>
+{#				<?php endforeach; ?>#}
+			</ul>
+		</li>
+
+		<li>
+			<a href="<?php echo Uri::create('/search/gender/:g', array('g' => '男')); ?>">男鞋</a>
+			<span>></span>
+			<ul class="sub_list" style="top:-58px;">
+{#				<?php foreach ($category_list['男'] as $cat => $a): ?>#}
+				<h4><a href="{% comment %}<?php echo Uri::create('/search/category/:cat', array('cat' => $cat)); ?>{% endcomment %}">
+					{% comment %}<?php echo $cat ?>{% endcomment %}</a>
+				</h4>
+				<ul>
+{#					<?php foreach ($a as $style): ?>#}
+					<li><a href="{% comment %}<?php echo Uri::create('/search/category/:cat?style=:s',
+						array('cat' => $cat, 's' => $style)); ?>{% endcomment %}">
+						{% comment %}<?php echo $style ?>{% endcomment %}</a>
+					</li>
+{#					<?php endforeach; ?>#}
+				</ul>
+{#				<?php endforeach; ?>#}
+			</ul>
+		</li>
+{#		<?php /*#}
+		<li>
+{#			<?php // last tab is category only ?>#}
+			<a href="<?php echo Uri::create('/search/category/:cat', array('cat' => '运动鞋')); ?>">运动鞋</a>
+			<span>></span>
+			<ul class="sub_list" style="top:-104px;">
+				<h4><a href="#"><?php echo __('filters.style'); ?></a>
+        		</h4>
+        		<ul>
+        			<?php foreach ($category_list['运动鞋'] as $style): ?>
+        			<li><a href="<?php echo Uri::create('/search/category/:cat?style=:s',
+        				array('cat' => '运动鞋', 's' => $style)); ?>">
+        				<?php echo $style ?></a>
+        			</li>
+        			<?php endforeach; ?>
+        		</ul>
+        	</ul>
+		</li>
+		*/ ?>
+		<li>
+			<?php // last tab is category only ?>
+			<a href="<?php echo Uri::create('/search/category/:cat', array('cat' => '户外鞋')); ?>">户外鞋</a>
+			<span>></span>
+			<ul class="sub_list" style="top:-104px; padding-bottom:90px;">
+				<h4><a href="#"><?php echo __('filters.style'); ?></a>
+        		</h4>
+        		<ul>
+        			<?php foreach ($category_list['户外鞋'] as $style): ?>
+        			<li><a href="<?php echo Uri::create('/search/category/:cat?style=:s',
+        				array('cat' => '户外鞋', 's' => $style)); ?>">
+        				<?php echo $style ?></a>
+        			</li>
+        			<?php endforeach; ?>
+        		</ul>
+        	</ul>
+		</li>
+		</ul>
+		</div>
+	</li>
+</ul><ul id="navis">
+	<li>
+	<a href="#<?php //echo Uri::create('search/category/'); ?>">所有类别</a>
+		<div id="all_lists">
+		<?php //<h3>类别</h3> ?>
+		<ul class="top_list">
+		<li>
+			<a href="<?php echo Uri::create('/search/gender/:g', array('g' => '女')); ?>">女鞋</a>
+			<span>></span>
+			<ul class="sub_list" style="top:-12px;">
+				<?php // for each category under female ?>
+				<?php foreach ($category_list['女'] as $cat => $a): ?>
+				<?php // create search in that category ?>
+				<h4><a href="<?php echo Uri::create('/search/category/:cat', array('cat' => $cat)); ?>">
+					<?php echo $cat ?></a>
+				</h4>
+				<ul>
+					<?php // for each style under that category ?>
+					<?php foreach ($a as $style): ?>
+					<?php // create search in that category with that style filter applied ?>
+					<li><a href="<?php echo Uri::create('/search/category/:cat?style=:s',
+						array('cat' => $cat, 's' => $style)); ?>">
+						<?php echo $style ?></a>
+					</li>
+					<?php endforeach; ?>
+				</ul>
+				<?php endforeach; ?>
+			</ul>
+		</li>
+
+		<li>
+			<a href="<?php echo Uri::create('/search/gender/:g', array('g' => '男')); ?>">男鞋</a>
+			<span>></span>
+			<ul class="sub_list" style="top:-58px;">
+				<?php foreach ($category_list['男'] as $cat => $a): ?>
+				<h4><a href="<?php echo Uri::create('/search/category/:cat', array('cat' => $cat)); ?>">
+					<?php echo $cat ?></a>
+				</h4>
+				<ul>
+					<?php foreach ($a as $style): ?>
+					<li><a href="<?php echo Uri::create('/search/category/:cat?style=:s',
+						array('cat' => $cat, 's' => $style)); ?>">
+						<?php echo $style ?></a>
+					</li>
+					<?php endforeach; ?>
+				</ul>
+				<?php endforeach; ?>
+			</ul>
+		</li>
+		<?php /*
+		<li>
+			<?php // last tab is category only ?>
+			<a href="<?php echo Uri::create('/search/category/:cat', array('cat' => '运动鞋')); ?>">运动鞋</a>
+			<span>></span>
+			<ul class="sub_list" style="top:-104px;">
+				<h4><a href="#"><?php echo __('filters.style'); ?></a>
+        		</h4>
+        		<ul>
+        			<?php foreach ($category_list['运动鞋'] as $style): ?>
+        			<li><a href="<?php echo Uri::create('/search/category/:cat?style=:s',
+        				array('cat' => '运动鞋', 's' => $style)); ?>">
+        				<?php echo $style ?></a>
+        			</li>
+        			<?php endforeach; ?>
+        		</ul>
+        	</ul>
+		</li>
+		*/ ?>
+		<li>
+			<?php // last tab is category only ?>
+			<a href="<?php echo Uri::create('/search/category/:cat', array('cat' => '户外鞋')); ?>">户外鞋</a>
+			<span>></span>
+			<ul class="sub_list" style="top:-104px; padding-bottom:90px;">
+				<h4><a href="#"><?php echo __('filters.style'); ?></a>
+        		</h4>
+        		<ul>
+        			<?php foreach ($category_list['户外鞋'] as $style): ?>
+        			<li><a href="<?php echo Uri::create('/search/category/:cat?style=:s',
+        				array('cat' => '户外鞋', 's' => $style)); ?>">
+        				<?php echo $style ?></a>
+        			</li>
+        			<?php endforeach; ?>
+        		</ul>
+        	</ul>
+		</li>
+		</ul>
+		</div>
+	</li>
+</ul>

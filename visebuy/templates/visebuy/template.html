@@ -1,0 +1,42 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8">
+    <title>
+{#      <?php if ($type == "homepage"): ?><?php echo __('header.title') ?> #}
+{#      <?php else: ?><?php echo $title ?> // VISEBuy <?php endif; ?>#}
+    </title>
+{#    <?php echo html_entity_decode($assets) ?>#}
+
+    <script type="text/javascript">
+{#      var hex = '<?php print $hex_dec ?>';          #}
+        //TODO what is hex_dex
+    </script>
+    <link rel="stylesheet" type="text/css" href="{% static "css/jquery-ui-1.8.15.custom.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/imgareaselect-default.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/reset.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/select2.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/colorpick.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/master.css" %}" />
+    <script src="{% static "js/jquery-1.7.1.min.js" %}"></script>
+    <script src="{% static "js/jquery-ui-1.8.17.custom.min.js" %}"></script>
+    <script src="{% static "js/jquery.touch.js" %}"></script>
+    <script src="{% static "js/jquery.imgareaselect.js" %}"></script>
+    <script src="{% static "js/jquery.tools.js" %}"></script>
+    <script src="{% static "js/colorpick.js" %}"></script>
+    <script src="{% static "js/jquery.jqzoom-core-pack.js" %}"></script>
+    <script src="{% static "js/master.js" %}"></script>
+    <script src="{% static "js/select2.js" %}"></script>
+  </head>
+{#  <body id="<?php print (isset($type) && !empty($type)) ? $type : "default"; ?>">#}
+{#    <?php echo $body ?>#}
+  <body id="homepage">
+    {{ main_body|safe }}
+{#    {% if page_title %}#}
+{#        {% with "pages/"|add:page_title|add:".html" as template %}#}
+{#        {% include template %}#}
+{#        {% endwith %}#}
+{#    {% endif %}#}
+  </body>
+</html>

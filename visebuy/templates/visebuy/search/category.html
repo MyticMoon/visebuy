@@ -1,0 +1,38 @@
+<?php if (isset($products['category'])): ?>
+<div class="category_sub">
+<h3><?php echo __('results.cat_choose_tree') ?></h3>
+<?php foreach ($products['category']['Category'] as $c): ?>
+ <?php if ($c['Level'] == 1): ?>
+ <h4><?php echo $c['CatName'] ?></h4>
+ <?php else: ?>
+ <span style="margin-right:10px"><a href="<?php echo Uri::create('search/category/:category', array('category' => $c['CatID'])) ?>"><?php echo $c['CatName'] ?></a></span>
+ <?php endif; ?>
+<?php endforeach; ?>
+</div>
+
+<?php else: ?>
+
+<?php echo $meta ?>
+
+<?php echo $filters_opt ?>
+ 
+ <div id="productslist">
+    <?php if ($total > 0): ?>
+      
+      <?php echo $display ?>
+
+      <?php if (isset($pages)): ?>
+      <div class="pagination">
+        <span class="page-links">
+        <?php foreach($pages as $p): ?>
+          <?php echo html_entity_decode($p) ?>
+        <?php endforeach; ?>
+        </span>
+      </div>
+      <?php endif; ?>
+            
+    <?php else: ?>
+      <p id="no_results"><?php echo __('results.no_results') ?></p>
+    <?php endif; ?>
+  <?php endif; ?>
+ </div>

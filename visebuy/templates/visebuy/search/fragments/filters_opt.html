@@ -1,0 +1,49 @@
+<div id="filters-opts">
+	<?php // search term ?>
+	<?php if (isset($search_term)): ?>
+	<h4><?php echo __('filters.search'); echo ':'; ?></h4>
+	<div id="search_term"><?php echo ' ' . $search_term . '   '; ?></div>
+	<?php endif; ?>
+	
+	<?php if (count($filters) > 0): ?>
+	<h4><?php echo __('filters.selectedFilter'); ?>:</h4>
+	<?php endif; ?>
+	<?php
+	$reducedFilter = array();
+	foreach ($filters as $k => $f)
+	{
+		// copy all selected filters
+		$reducedFilter["$k"] = $filters;
+		
+		foreach ($filters as $k2 => $f2)
+		{
+			// remove 1 element from each index
+			if ($k == $k2)
+			{
+				unset($reducedFilter["$k"]["$k"]);
+			}
+		}
+		
+		$reducedFilter["$k"] = http_build_query($reducedFilter["$k"]);
+	}
+	?>
+	<ul>
+		<?php // set already selected filters ?>
+		<?php if (isset($filters)): ?>
+			<?php $i = 0; ?>
+			<?php // $k = key, $f = value. | eg, $k = gender, $f = 男?>
+			<?php foreach ($filters as $k => $f): ?>
+				
+				<?php // link to same page without filter of current key ?>
+				<a href="<?php echo $url . '?' . $reducedFilter["$k"]; ?>">
+				
+				<?php // <li class="gender">男</li> ?>
+				<li class="<?php echo $k; ?>"><?php echo $f ?></li>
+				
+				</a>
+				<?php $i++; if ($i != count($filters)) { echo('<span>+</span>');} ?>
+			<?php endforeach; ?>
+		<?php endif; ?>
+	</ul>
+	<?php echo $orderDiv; ?>
+</div>

@@ -1,0 +1,24 @@
+<ul class="display_list clearfix">
+<?php if (Uri::segment(6) == 'duplicate'): ?>
+	<?php foreach ($duplicateProducts as $p): ?>
+	<?php $p = $duplicateProducts[0]; ?>
+	<li>
+		<div class="display_img"><p><a href="<?php echo Uri::create('search/product/:id', array('id' => $p['ProductID'])) ?>"><img class="drag_img" width="160" height="160" data-id="<?php echo $p['ProductImageID'] ?>" src="http://msm2.cais.ntu.edu.sg/okbuyimgs/<?php echo $p['ProductImage'] ?>"></a></p></div>
+		<div class="display_details">
+		<p><?php echo $p['ProductName'] ?></p>
+		<p class="display_price"><b><?php echo $p['ProductPrice'] ?></b>元</p>
+		</div>
+	</li>
+	<?php endforeach; ?>
+<?php else: ?>
+	<?php foreach ($products as $p): ?>
+	<li>
+		<div class="display_img"><p><a href="<?php echo Uri::create('search/product/:id', array('id' => $p['ProductID'])) ?>"><img class="drag_img" width="160" height="160" data-id="<?php echo $p['ProductImageID'] ?>" src="http://msm2.cais.ntu.edu.sg/okbuyimgs/<?php echo $p['ProductImage'] ?>"></a></p></div>
+		<div class="display_details">
+		<p><?php echo $p['ProductName'] ?></p>
+		<p class="display_price"><b><?php echo $p['ProductPrice'] ?></b>元</p>
+		</div>
+	</li>
+	<?php endforeach; ?>
+<?php endif; ?>
+</ul>

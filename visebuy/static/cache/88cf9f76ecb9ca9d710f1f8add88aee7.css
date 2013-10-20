@@ -1,0 +1,295 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none}[hidden]{display:none}html{font-size:100%;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}body,button,input,select,textarea{font-family:sans-serif}a:focus{outline:thin dotted}a:hover,a:active{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}blockquote{margin:1em
+40px}dfn{font-style:italic}mark{background:#ff0;color:#000}pre,code,kbd,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small{font-size:75%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top: -0.5em}sub{bottom: -0.25em}ul,ol{margin:1em
+0;padding:0
+0 0 40px}dd{margin:0
+0 0 40px}nav ul,
+nav
+ol{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px
+solid #c0c0c0;margin:0
+2px;padding:0.35em 0.625em 0.75em}legend{border:0;*margin-left: -7px}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;*overflow:visible}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+.ui-helper-hidden{display:none}.ui-helper-hidden-accessible{position:absolute !important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}.ui-helper-reset{margin:0;padding:0;border:0;outline:0;line-height:1.3;text-decoration:none;font-size:100%;list-style:none}.ui-helper-clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}.ui-helper-clearfix{display:inline-block}/*\*/* html .ui-helper-clearfix{height:1%}.ui-helper-clearfix{display:block}/**/.ui-helper-zfix{width:100%;height:100%;top:0;left:0;position:absolute;opacity:0;filter:Alpha(Opacity=0)}.ui-state-disabled{cursor:default !important}.ui-icon{display:block;text-indent: -99999px;overflow:hidden;background-repeat:no-repeat}.ui-widget-overlay{position:absolute;top:0;left:0;width:100%;height:100%}.ui-widget{font-family:TrebuchetMS,Tahoma,Verdana,Arial,sans-serif;font-size:1.1em}.ui-widget .ui-widget{font-size:1em}.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget
+button{font-family:TrebuchetMS,Tahoma,Verdana,Arial,sans-serif;font-size:1em}.ui-widget-content{border:1px
+solid #d9d6c4;background:#eceadf url(isebuy/Web/php_visebuy/public/visebuy/assets/css/images/ui-bg_fine-grain_10_eceadf_60x60.png) 50% 50% repeat;color:#1f1f1f}.ui-widget-content
+a{color:#1f1f1f}.ui-widget-header{border:1px
+solid #d4d1bf;background:#fff url(isebuy/Web/php_visebuy/public/visebuy/assets/css/images/ui-bg_fine-grain_15_ffffff_60x60.png) 50% 50% repeat;color:#453821;font-weight:bold}.ui-widget-header
+a{color:#453821}.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{border:1px
+solid #cbc7bd;background:#f8f7f6 url(isebuy/Web/php_visebuy/public/visebuy/assets/css/images/ui-bg_fine-grain_10_f8f7f6_60x60.png) 50% 50% repeat;font-weight:bold;color:#654b24}.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited{color:#654b24;text-decoration:none}.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus{border:1px
+solid #654b24;background:#654b24 url(isebuy/Web/php_visebuy/public/visebuy/assets/css/images/ui-bg_fine-grain_65_654b24_60x60.png) 50% 50% repeat;font-weight:bold;color:#fff}.ui-state-hover a, .ui-state-hover a:hover{color:#fff;text-decoration:none}.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active{border:1px
+solid #d9d6c4;background:#eceadf url(isebuy/Web/php_visebuy/public/visebuy/assets/css/images/ui-bg_fine-grain_15_eceadf_60x60.png) 50% 50% repeat;font-weight:bold;color:#140f06}.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited{color:#140f06;text-decoration:none}.ui-widget :active{outline:none}.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{border:1px
+solid #b2a266;background:#f7f3de url(isebuy/Web/php_visebuy/public/visebuy/assets/css/images/ui-bg_fine-grain_15_f7f3de_60x60.png) 50% 50% repeat;color:#3a3427}.ui-state-highlight a, .ui-widget-content .ui-state-highlight a,.ui-widget-header .ui-state-highlight
+a{color:#3a3427}.ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error{border:1px
+solid #681818;background:#b83400 url(isebuy/Web/php_visebuy/public/visebuy/assets/css/images/ui-bg_fine-grain_68_b83400_60x60.png) 50% 50% repeat;color:#fff}.ui-state-error a, .ui-widget-content .ui-state-error a, .ui-widget-header .ui-state-error
+a{color:#fff}.ui-state-error-text, .ui-widget-content .ui-state-error-text, .ui-widget-header .ui-state-error-text{color:#fff}.ui-priority-primary, .ui-widget-content .ui-priority-primary, .ui-widget-header .ui-priority-primary{font-weight:bold}.ui-priority-secondary, .ui-widget-content .ui-priority-secondary,  .ui-widget-header .ui-priority-secondary{opacity: .7;filter:Alpha(Opacity=70);font-weight:normal}.ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled{opacity: .35;filter:Alpha(Opacity=35);background-image:none}.ui-icon{width:16px;height:16px;background-image:url(isebuy/Web/php_visebuy/public/visebuy/assets/css/images/ui-icons_222222_256x240.png)}.ui-widget-content .ui-icon{background-image:url(isebuy/Web/php_visebuy/public/visebuy/assets/css/images/ui-icons_222222_256x240.png)}.ui-widget-header .ui-icon{background-image:url(isebuy/Web/php_visebuy/public/visebuy/assets/css/images/ui-icons_b83400_256x240.png)}.ui-state-default .ui-icon{background-image:url(isebuy/Web/php_visebuy/public/visebuy/assets/css/images/ui-icons_b83400_256x240.png)}.ui-state-hover .ui-icon, .ui-state-focus .ui-icon{background-image:url(isebuy/Web/php_visebuy/public/visebuy/assets/css/images/ui-icons_ffffff_256x240.png)}.ui-state-active .ui-icon{background-image:url(isebuy/Web/php_visebuy/public/visebuy/assets/css/images/ui-icons_8c291d_256x240.png)}.ui-state-highlight .ui-icon{background-image:url(isebuy/Web/php_visebuy/public/visebuy/assets/css/images/ui-icons_3572ac_256x240.png)}.ui-state-error .ui-icon, .ui-state-error-text .ui-icon{background-image:url(isebuy/Web/php_visebuy/public/visebuy/assets/css/images/ui-icons_fbdb93_256x240.png)}.ui-icon-carat-1-n{background-position:0 0}.ui-icon-carat-1-ne{background-position: -16px 0}.ui-icon-carat-1-e{background-position: -32px 0}.ui-icon-carat-1-se{background-position: -48px 0}.ui-icon-carat-1-s{background-position: -64px 0}.ui-icon-carat-1-sw{background-position: -80px 0}.ui-icon-carat-1-w{background-position: -96px 0}.ui-icon-carat-1-nw{background-position: -112px 0}.ui-icon-carat-2-n-s{background-position: -128px 0}.ui-icon-carat-2-e-w{background-position: -144px 0}.ui-icon-triangle-1-n{background-position:0 -16px}.ui-icon-triangle-1-ne{background-position: -16px -16px}.ui-icon-triangle-1-e{background-position: -32px -16px}.ui-icon-triangle-1-se{background-position: -48px -16px}.ui-icon-triangle-1-s{background-position: -64px -16px}.ui-icon-triangle-1-sw{background-position: -80px -16px}.ui-icon-triangle-1-w{background-position: -96px -16px}.ui-icon-triangle-1-nw{background-position: -112px -16px}.ui-icon-triangle-2-n-s{background-position: -128px -16px}.ui-icon-triangle-2-e-w{background-position: -144px -16px}.ui-icon-arrow-1-n{background-position:0 -32px}.ui-icon-arrow-1-ne{background-position: -16px -32px}.ui-icon-arrow-1-e{background-position: -32px -32px}.ui-icon-arrow-1-se{background-position: -48px -32px}.ui-icon-arrow-1-s{background-position: -64px -32px}.ui-icon-arrow-1-sw{background-position: -80px -32px}.ui-icon-arrow-1-w{background-position: -96px -32px}.ui-icon-arrow-1-nw{background-position: -112px -32px}.ui-icon-arrow-2-n-s{background-position: -128px -32px}.ui-icon-arrow-2-ne-sw{background-position: -144px -32px}.ui-icon-arrow-2-e-w{background-position: -160px -32px}.ui-icon-arrow-2-se-nw{background-position: -176px -32px}.ui-icon-arrowstop-1-n{background-position: -192px -32px}.ui-icon-arrowstop-1-e{background-position: -208px -32px}.ui-icon-arrowstop-1-s{background-position: -224px -32px}.ui-icon-arrowstop-1-w{background-position: -240px -32px}.ui-icon-arrowthick-1-n{background-position:0 -48px}.ui-icon-arrowthick-1-ne{background-position: -16px -48px}.ui-icon-arrowthick-1-e{background-position: -32px -48px}.ui-icon-arrowthick-1-se{background-position: -48px -48px}.ui-icon-arrowthick-1-s{background-position: -64px -48px}.ui-icon-arrowthick-1-sw{background-position: -80px -48px}.ui-icon-arrowthick-1-w{background-position: -96px -48px}.ui-icon-arrowthick-1-nw{background-position: -112px -48px}.ui-icon-arrowthick-2-n-s{background-position: -128px -48px}.ui-icon-arrowthick-2-ne-sw{background-position: -144px -48px}.ui-icon-arrowthick-2-e-w{background-position: -160px -48px}.ui-icon-arrowthick-2-se-nw{background-position: -176px -48px}.ui-icon-arrowthickstop-1-n{background-position: -192px -48px}.ui-icon-arrowthickstop-1-e{background-position: -208px -48px}.ui-icon-arrowthickstop-1-s{background-position: -224px -48px}.ui-icon-arrowthickstop-1-w{background-position: -240px -48px}.ui-icon-arrowreturnthick-1-w{background-position:0 -64px}.ui-icon-arrowreturnthick-1-n{background-position: -16px -64px}.ui-icon-arrowreturnthick-1-e{background-position: -32px -64px}.ui-icon-arrowreturnthick-1-s{background-position: -48px -64px}.ui-icon-arrowreturn-1-w{background-position: -64px -64px}.ui-icon-arrowreturn-1-n{background-position: -80px -64px}.ui-icon-arrowreturn-1-e{background-position: -96px -64px}.ui-icon-arrowreturn-1-s{background-position: -112px -64px}.ui-icon-arrowrefresh-1-w{background-position: -128px -64px}.ui-icon-arrowrefresh-1-n{background-position: -144px -64px}.ui-icon-arrowrefresh-1-e{background-position: -160px -64px}.ui-icon-arrowrefresh-1-s{background-position: -176px -64px}.ui-icon-arrow-4{background-position:0 -80px}.ui-icon-arrow-4-diag{background-position: -16px -80px}.ui-icon-extlink{background-position: -32px -80px}.ui-icon-newwin{background-position: -48px -80px}.ui-icon-refresh{background-position: -64px -80px}.ui-icon-shuffle{background-position: -80px -80px}.ui-icon-transfer-e-w{background-position: -96px -80px}.ui-icon-transferthick-e-w{background-position: -112px -80px}.ui-icon-folder-collapsed{background-position:0 -96px}.ui-icon-folder-open{background-position: -16px -96px}.ui-icon-document{background-position: -32px -96px}.ui-icon-document-b{background-position: -48px -96px}.ui-icon-note{background-position: -64px -96px}.ui-icon-mail-closed{background-position: -80px -96px}.ui-icon-mail-open{background-position: -96px -96px}.ui-icon-suitcase{background-position: -112px -96px}.ui-icon-comment{background-position: -128px -96px}.ui-icon-person{background-position: -144px -96px}.ui-icon-print{background-position: -160px -96px}.ui-icon-trash{background-position: -176px -96px}.ui-icon-locked{background-position: -192px -96px}.ui-icon-unlocked{background-position: -208px -96px}.ui-icon-bookmark{background-position: -224px -96px}.ui-icon-tag{background-position: -240px -96px}.ui-icon-home{background-position:0 -112px}.ui-icon-flag{background-position: -16px -112px}.ui-icon-calendar{background-position: -32px -112px}.ui-icon-cart{background-position: -48px -112px}.ui-icon-pencil{background-position: -64px -112px}.ui-icon-clock{background-position: -80px -112px}.ui-icon-disk{background-position: -96px -112px}.ui-icon-calculator{background-position: -112px -112px}.ui-icon-zoomin{background-position: -128px -112px}.ui-icon-zoomout{background-position: -144px -112px}.ui-icon-search{background-position: -160px -112px}.ui-icon-wrench{background-position: -176px -112px}.ui-icon-gear{background-position: -192px -112px}.ui-icon-heart{background-position: -208px -112px}.ui-icon-star{background-position: -224px -112px}.ui-icon-link{background-position: -240px -112px}.ui-icon-cancel{background-position:0 -128px}.ui-icon-plus{background-position: -16px -128px}.ui-icon-plusthick{background-position: -32px -128px}.ui-icon-minus{background-position: -48px -128px}.ui-icon-minusthick{background-position: -64px -128px}.ui-icon-close{background-position: -80px -128px}.ui-icon-closethick{background-position: -96px -128px}.ui-icon-key{background-position: -112px -128px}.ui-icon-lightbulb{background-position: -128px -128px}.ui-icon-scissors{background-position: -144px -128px}.ui-icon-clipboard{background-position: -160px -128px}.ui-icon-copy{background-position: -176px -128px}.ui-icon-contact{background-position: -192px -128px}.ui-icon-image{background-position: -208px -128px}.ui-icon-video{background-position: -224px -128px}.ui-icon-script{background-position: -240px -128px}.ui-icon-alert{background-position:0 -144px}.ui-icon-info{background-position: -16px -144px}.ui-icon-notice{background-position: -32px -144px}.ui-icon-help{background-position: -48px -144px}.ui-icon-check{background-position: -64px -144px}.ui-icon-bullet{background-position: -80px -144px}.ui-icon-radio-off{background-position: -96px -144px}.ui-icon-radio-on{background-position: -112px -144px}.ui-icon-pin-w{background-position: -128px -144px}.ui-icon-pin-s{background-position: -144px -144px}.ui-icon-play{background-position:0 -160px}.ui-icon-pause{background-position: -16px -160px}.ui-icon-seek-next{background-position: -32px -160px}.ui-icon-seek-prev{background-position: -48px -160px}.ui-icon-seek-end{background-position: -64px -160px}.ui-icon-seek-start{background-position: -80px -160px}.ui-icon-seek-first{background-position: -80px -160px}.ui-icon-stop{background-position: -96px -160px}.ui-icon-eject{background-position: -112px -160px}.ui-icon-volume-off{background-position: -128px -160px}.ui-icon-volume-on{background-position: -144px -160px}.ui-icon-power{background-position:0 -176px}.ui-icon-signal-diag{background-position: -16px -176px}.ui-icon-signal{background-position: -32px -176px}.ui-icon-battery-0{background-position: -48px -176px}.ui-icon-battery-1{background-position: -64px -176px}.ui-icon-battery-2{background-position: -80px -176px}.ui-icon-battery-3{background-position: -96px -176px}.ui-icon-circle-plus{background-position:0 -192px}.ui-icon-circle-minus{background-position: -16px -192px}.ui-icon-circle-close{background-position: -32px -192px}.ui-icon-circle-triangle-e{background-position: -48px -192px}.ui-icon-circle-triangle-s{background-position: -64px -192px}.ui-icon-circle-triangle-w{background-position: -80px -192px}.ui-icon-circle-triangle-n{background-position: -96px -192px}.ui-icon-circle-arrow-e{background-position: -112px -192px}.ui-icon-circle-arrow-s{background-position: -128px -192px}.ui-icon-circle-arrow-w{background-position: -144px -192px}.ui-icon-circle-arrow-n{background-position: -160px -192px}.ui-icon-circle-zoomin{background-position: -176px -192px}.ui-icon-circle-zoomout{background-position: -192px -192px}.ui-icon-circle-check{background-position: -208px -192px}.ui-icon-circlesmall-plus{background-position:0 -208px}.ui-icon-circlesmall-minus{background-position: -16px -208px}.ui-icon-circlesmall-close{background-position: -32px -208px}.ui-icon-squaresmall-plus{background-position: -48px -208px}.ui-icon-squaresmall-minus{background-position: -64px -208px}.ui-icon-squaresmall-close{background-position: -80px -208px}.ui-icon-grip-dotted-vertical{background-position:0 -224px}.ui-icon-grip-dotted-horizontal{background-position: -16px -224px}.ui-icon-grip-solid-vertical{background-position: -32px -224px}.ui-icon-grip-solid-horizontal{background-position: -48px -224px}.ui-icon-gripsmall-diagonal-se{background-position: -64px -224px}.ui-icon-grip-diagonal-se{background-position: -80px -224px}.ui-corner-all,.ui-corner-top,.ui-corner-left,.ui-corner-tl{-moz-border-radius-topleft:6px;-webkit-border-top-left-radius:6px;-khtml-border-top-left-radius:6px;border-top-left-radius:6px}.ui-corner-all,.ui-corner-top,.ui-corner-right,.ui-corner-tr{-moz-border-radius-topright:6px;-webkit-border-top-right-radius:6px;-khtml-border-top-right-radius:6px;border-top-right-radius:6px}.ui-corner-all,.ui-corner-bottom,.ui-corner-left,.ui-corner-bl{-moz-border-radius-bottomleft:6px;-webkit-border-bottom-left-radius:6px;-khtml-border-bottom-left-radius:6px;border-bottom-left-radius:6px}.ui-corner-all,.ui-corner-bottom,.ui-corner-right,.ui-corner-br{-moz-border-radius-bottomright:6px;-webkit-border-bottom-right-radius:6px;-khtml-border-bottom-right-radius:6px;border-bottom-right-radius:6px}.ui-widget-overlay{background:#6e4f1c url(isebuy/Web/php_visebuy/public/visebuy/assets/css/images/ui-bg_diagonal-maze_20_6e4f1c_10x10.png) 50% 50% repeat;opacity: .60;filter:Alpha(Opacity=60)}.ui-widget-shadow{margin:0
+0 0 -10px;padding:5px;background:#000 url(isebuy/Web/php_visebuy/public/visebuy/assets/css/images/ui-bg_diagonal-maze_40_000000_10x10.png) 50% 50% repeat;opacity: .60;filter:Alpha(Opacity=60);-moz-border-radius:18px;-khtml-border-radius:18px;-webkit-border-radius:18px;border-radius:18px}.ui-accordion{width:100%}.ui-accordion .ui-accordion-header{cursor:pointer;position:relative;margin-top:1px;zoom:1}.ui-accordion .ui-accordion-li-fix{display:inline}.ui-accordion .ui-accordion-header-active{border-bottom:0 !important}.ui-accordion .ui-accordion-header
+a{display:block;font-size:1em;padding: .5em .5em .5em .7em}.ui-accordion-icons .ui-accordion-header
+a{padding-left:0.5em}.ui-accordion .ui-accordion-header .ui-icon{position:absolute;right: .1em;top:50%;margin-top: -8px}.ui-accordion .ui-accordion-content{padding:0.5em;border-top:0;margin-top: -2px;position:relative;top:1px;margin-bottom:2px;overflow:auto;display:none;zoom:1}.ui-accordion .ui-accordion-content-active{display:block}.ui-autocomplete{position:absolute;cursor:default}* html .ui-autocomplete{width:1px}.ui-menu{list-style:none;padding:2px;margin:0;display:block;float:left}.ui-menu .ui-menu{margin-top: -3px}.ui-menu .ui-menu-item{margin:0;padding:0;zoom:1;float:left;clear:left;width:100%}.ui-menu .ui-menu-item
+a{text-decoration:none;display:block;padding:.2em .4em;line-height:1.5;zoom:1}.ui-menu .ui-menu-item a.ui-state-hover,
+.ui-menu .ui-menu-item a.ui-state-active{font-weight:normal;margin: -1px}
+.imgareaselect-border1{background:url(/visebuy/assets/img/border-v.gif) repeat-y left top}.imgareaselect-border2{background:url(/visebuy/assets/img/border-h.gif) repeat-x left top}.imgareaselect-border3{background:url(/visebuy/assets/img/border-v.gif) repeat-y right top}.imgareaselect-border4{background:url(/visebuy/assets/img/border-h.gif) repeat-x left bottom}.imgareaselect-border1,.imgareaselect-border2,.imgareaselect-border3,.imgareaselect-border4{filter:alpha(opacity=50);opacity:0.5}.imgareaselect-handle{background-color:#fff;border:solid 1px #000;filter:alpha(opacity=50);opacity:0.5}.imgareaselect-outer{background-color:#000;filter:alpha(opacity=50);opacity:0.5}.imgareaselect-selection{}
+.select2-container{position:relative;display:inline-block;zoom:1;*display:inline}.select2-container,
+.select2-drop,
+.select2-search,
+.select2-container .select2-search
+input{-moz-box-sizing:border-box;-ms-box-sizing:border-box;-webkit-box-sizing:border-box;-khtml-box-sizing:border-box;box-sizing:border-box}.select2-container .select2-choice{background-color:#fff;background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eeeeee), color-stop(0.5, white));background-image: -webkit-linear-gradient(center bottom, #eee 0%, white 50%);background-image: -moz-linear-gradient(center bottom, #eee 0%, white 50%);background-image: -o-linear-gradient(bottom, #eee 0%, #fff 50%);background-image: -ms-linear-gradient(top, #eee 0%, #fff 50%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr = '#eeeeee', endColorstr = '#ffffff', GradientType = 0);background-image:linear-gradient(top, #eee 0%, #fff 50%);-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;border:1px
+solid #aaa;display:block;overflow:hidden;white-space:nowrap;position:relative;height:26px;line-height:26px;padding:0
+0 0 8px;color:#444;text-decoration:none}.select2-container .select2-choice
+span{margin-right:26px;display:block;overflow:hidden;white-space:nowrap;-o-text-overflow:ellipsis;-ms-text-overflow:ellipsis;text-overflow:ellipsis}.select2-container .select2-choice
+abbr{display:block;position:absolute;right:26px;top:8px;width:12px;height:12px;font-size:1px;background:url(/visebuy/assets/img/select2.png) right top no-repeat;cursor:pointer;text-decoration:none;border:0;outline:0}.select2-container .select2-choice abbr:hover{background-position:right -11px;cursor:pointer}.select2-container .select2-drop{background:#fff;border:1px
+solid #aaa;border-top:0;position:absolute;top:100%;-webkit-box-shadow:0 4px 5px rgba(0, 0, 0, .15);-moz-box-shadow:0 4px 5px rgba(0, 0, 0, .15);-o-box-shadow:0 4px 5px rgba(0, 0, 0, .15);box-shadow:0 4px 5px rgba(0, 0, 0, .15);z-index:999;width:100%;margin-top:-1px;-webkit-border-radius:0 0 4px 4px;-moz-border-radius:0 0 4px 4px;border-radius:0 0 4px 4px}.select2-container .select2-choice
+div{-webkit-border-radius:0 4px 4px 0;-moz-border-radius:0 4px 4px 0;border-radius:0 4px 4px 0;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;background:#ccc;background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ccc), color-stop(0.6, #eee));background-image: -webkit-linear-gradient(center bottom, #ccc 0%, #eee 60%);background-image: -moz-linear-gradient(center bottom, #ccc 0%, #eee 60%);background-image: -o-linear-gradient(bottom, #ccc 0%, #eee 60%);background-image: -ms-linear-gradient(top, #ccc 0%, #eee 60%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr = '#cccccc', endColorstr = '#eeeeee', GradientType = 0);background-image:linear-gradient(top, #ccc 0%, #eee 60%);border-left:1px solid #aaa;position:absolute;right:0;top:0;display:block;height:100%;width:18px}.select2-container .select2-choice div
+b{background:url('/visebuy/assets/img/select2.png') no-repeat 0 1px;display:block;width:100%;height:100%}.select2-container .select2-search{display:inline-block;white-space:nowrap;z-index:1010;min-height:26px;width:100%;margin:0;padding-left:4px;padding-right:4px}.select2-container .select2-search
+input{background:#fff url('/visebuy/assets/img/select2.png') no-repeat 100% -22px;background:url('/visebuy/assets/img/select2.png') no-repeat 100% -22px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee));background:url('/visebuy/assets/img/select2.png') no-repeat 100% -22px, -webkit-linear-gradient(center bottom, white 85%, #eee 99%);background:url('/visebuy/assets/img/select2.png') no-repeat 100% -22px, -moz-linear-gradient(center bottom, white 85%, #eee 99%);background:url('/visebuy/assets/img/select2.png') no-repeat 100% -22px, -o-linear-gradient(bottom, white 85%, #eee 99%);background:url('/visebuy/assets/img/select2.png') no-repeat 100% -22px, -ms-linear-gradient(top, #fff 85%, #eee 99%);background:url('/visebuy/assets/img/select2.png') no-repeat 100% -22px, linear-gradient(top, #fff 85%, #eee 99%);padding:4px
+20px 4px 5px;outline:0;border:1px
+solid #aaa;font-family:sans-serif;font-size:1em;width:100%;margin:0;height:auto !important;min-height:26px;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;border-radius:0;-moz-border-radius:0;-webkit-border-radius:0}.select2-container .select2-search input.select2-active{background:#fff url('/visebuy/assets/img/spinner.gif') no-repeat 100%;background:url('/visebuy/assets/img/spinner.gif') no-repeat 100%, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee));background:url('/visebuy/assets/img/spinner.gif') no-repeat 100%, -webkit-linear-gradient(center bottom, white 85%, #eee 99%);background:url('/visebuy/assets/img/spinner.gif') no-repeat 100%, -moz-linear-gradient(center bottom, white 85%, #eee 99%);background:url('/visebuy/assets/img/spinner.gif') no-repeat 100%, -o-linear-gradient(bottom, white 85%, #eee 99%);background:url('/visebuy/assets/img/spinner.gif') no-repeat 100%, -ms-linear-gradient(top, #fff 85%, #eee 99%);background:url('/visebuy/assets/img/spinner.gif') no-repeat 100%, linear-gradient(top, #fff 85%, #eee 99%)}.select2-container-active .select2-choice,
+.select2-container-active .select2-choices{-webkit-box-shadow:0 0 5px rgba(0,0,0,.3);-moz-box-shadow:0 0 5px rgba(0,0,0,.3);-o-box-shadow:0 0 5px rgba(0,0,0,.3);box-shadow:0 0 5px rgba(0,0,0,.3);border:1px
+solid #5897fb;outline:none}.select2-dropdown-open .select2-choice{border:1px
+solid #aaa;border-bottom-color:transparent;-webkit-box-shadow:0 1px 0 #fff inset;-moz-box-shadow:0 1px 0 #fff inset;-o-box-shadow:0 1px 0 #fff inset;box-shadow:0 1px 0 #fff inset;background-color:#eee;background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, white), color-stop(0.5, #eeeeee));background-image: -webkit-linear-gradient(center bottom, white 0%, #eee 50%);background-image: -moz-linear-gradient(center bottom, white 0%, #eee 50%);background-image: -o-linear-gradient(bottom, white 0%, #eee 50%);background-image: -ms-linear-gradient(top, #fff 0%,#eee 50%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 );background-image:linear-gradient(top, #fff 0%,#eee 50%);-webkit-border-bottom-left-radius:0;-webkit-border-bottom-right-radius:0;-moz-border-radius-bottomleft:0;-moz-border-radius-bottomright:0;border-bottom-left-radius:0;border-bottom-right-radius:0}.select2-dropdown-open .select2-choice
+div{background:transparent;border-left:none}.select2-dropdown-open .select2-choice div
+b{background-position: -18px 1px}.select2-container .select2-results{margin:4px
+4px 4px 0;padding:0
+0 0 4px;position:relative;overflow-x:hidden;overflow-y:auto;max-height:200px}.select2-container .select2-results
+li{line-height:80%;padding:7px
+7px 8px;margin:0;list-style:none;cursor:pointer;display:list-item}.select2-container .select2-results .select2-highlighted{background:#3875d7;color:#fff}.select2-container .select2-results li
+em{background:#feffde;font-style:normal}.select2-container .select2-results .select2-highlighted
+em{background:transparent}.select2-container .select2-results .select2-no-results{background:#f4f4f4;display:list-item}.select2-container .select2-results .select2-disabled{display:none}.select2-more-results.select2-active{background:#f4f4f4 url('isebuy/Web/php_visebuy/public/visebuy/assets/css/spinner.gif') no-repeat 100%}.select2-more-results{background:#f4f4f4;display:list-item}.select2-container-multi .select2-choices{background-color:#fff;background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(1%, #eeeeee), color-stop(15%, #ffffff));background-image: -webkit-linear-gradient(top, #eee 1%, #fff 15%);background-image: -moz-linear-gradient(top, #eee 1%, #fff 15%);background-image: -o-linear-gradient(top, #eee 1%, #fff 15%);background-image: -ms-linear-gradient(top, #eee 1%, #fff 15%);background-image:linear-gradient(top, #eee 1%, #fff 15%);border:1px
+solid #aaa;margin:0;padding:0;cursor:text;overflow:hidden;height:auto !important;height:1%;position:relative}.select2-container-multi .select2-drop{margin-top:0}.select2-container-multi.select2-container-active .select2-choices{-webkit-box-shadow:0 0 5px rgba(0,0,0,.3);-moz-box-shadow:0 0 5px rgba(0,0,0,.3);-o-box-shadow:0 0 5px rgba(0,0,0,.3);box-shadow:0 0 5px rgba(0,0,0,.3);border:1px
+solid #5897fb;outline:none}.select2-container-multi .select2-choices
+li{float:left;list-style:none}.select2-container-multi .select2-choices .select2-search-field{white-space:nowrap;margin:0;padding:0}.select2-container-multi .select2-choices .select2-search-field
+input{color:#666;background:transparent !important;font-family:sans-serif;font-size:100%;height:15px;padding:5px;margin:1px
+0;outline:0;border:0;-webkit-box-shadow:none;-moz-box-shadow:none;-o-box-shadow:none;box-shadow:none}.select2-default{color:#999 !important}.select2-container-multi .select2-choices .select2-search-choice{-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;background-color:#e4e4e4;filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#eeeeee', GradientType=0 );background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(20%, #f4f4f4), color-stop(50%, #f0f0f0), color-stop(52%, #e8e8e8), color-stop(100%, #eeeeee));background-image: -webkit-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%);background-image: -moz-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%);background-image: -o-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%);background-image: -ms-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%);background-image:linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%);-webkit-box-shadow:0 0 2px #fff inset, 0 1px 0 rgba(0,0,0,0.05);-moz-box-shadow:0 0 2px #fff inset, 0 1px 0 rgba(0,0,0,0.05);box-shadow:0 0 2px #fff inset, 0 1px 0 rgba(0,0,0,0.05);color:#333;border:1px
+solid #aaa;line-height:13px;padding:3px
+5px 3px 18px;margin:3px
+0 3px 5px;position:relative;cursor:default}.select2-container-multi .select2-choices .select2-search-choice
+span{cursor:default}.select2-container-multi .select2-choices .select2-search-choice-focus{background:#d4d4d4}.select2-search-choice-close{display:block;position:absolute;right:3px;top:4px;width:12px;height:13px;font-size:1px;background:url(/visebuy/assets/img/select2.png) right top no-repeat;outline:none}.select2-container-multi .select2-search-choice-close{left:3px}.select2-container-multi .select2-choices .select2-search-choice .select2-search-choice-close:hover{background-position:right -11px}.select2-container-multi .select2-choices .select2-search-choice-focus .select2-search-choice-close{background-position:right -11px}.select2-container-multi .select2-results{margin: -1px 0 0;padding:0}
+.colorpicker-picker-span{display:block;width:20px;height:20px;float:left;border:1px
+solid #000;margin-right:2px;cursor:pointer}.colorpicker-picker-info{padding:0
+0 2px;color:#fff;text-align:center;text-transform:uppercase;display:none}.colorpicker-picker-span:hover{border:1px
+solid #fff}.colorpicker-picker-span.active{border:1px
+solid #fff}.colorpicker-picker{background-color:#353534;padding:5px;display:none;position:absolute;top:0;-moz-border-radius:5px;border-radius:5px;box-shadow:2px 2px 5px #111;-moz-box-shadow:2px 2px 5px #111;-webkit-box-shadow:2px 2px 5px #111}.colorpicker-trigger{border:2px
+solid #FFF;cursor:pointer;display:block;float:left;height:14px;width:14px}.colorpicker-wrap{position:relative;z-index:10000;font-family:'Trebuchet MS',Verdana,Arial,Geneva,sans-serif}.colorpicker-label{float:left;margin-right:2px}
+body{font:13.5px/1.5 Arial,Verdana,sans-serif;color:#333;background:url("/visebuy/assets/img/result_bg.png") repeat-y scroll 70px center transparent}body#homepage{box-shadow:none;border:0;background:none}body#default,body#products{background:none}a:link,a:visited{color:#999;text-decoration:none}a:hover,a:focus{text-decoration:underline}#filters-opts{width:78%;background-color:rgb(250,250,250);overflow:hidden;position:absolute;top:50px;left:265px;margin-top:5px;padding:0px
+0px 0px 10px;border:thin solid rgb(240,240,240)}#filters-opts h4, #filters-opts span, #filters-opts
+#search_term{float:left;margin:0px}#filters-opts
+#search_term{white-space:pre}#filters-opts h4, #filters-opts
+#search_term{padding:8px
+0px}#filters-opts
+span{padding:3px
+0px;font-weight:bold}#filters-opts
+ul{float:left;margin:0;padding:5px
+0px;display:inline;position:relative}#filters-opts ul
+li{background:#FFF url(/visebuy/assets/img/filter_remove.png) no-repeat right;border-style:solid;border-width:thin;border-color:#7030A0;cursor:pointer;float:left;list-style:none outside none;padding:2px
+20px 2px 5px;margin:0px
+10px}#order{position:relative;float:right;margin:8px
+0px}#order
+a{margin:0px
+5px;padding:5px;border:solid rgb(100,100,100) thin;border-radius:5px;color:black}#order a:hover{text-decoration:none;background-color:rgb(100,100,100);color:white}#order
+a.change_layout{border:none;border-radius:0px;margin:0px}#order a.change_layout:hover{background-color:rgb(220,220,220)}#orderSelected{display:inline}#orderSelected
+a{background-color:#7030A0;color:white;border:solid #7030A0 thin;border-radius:5px}#orderSelected a:hover{background-color:#7030A0}#header{background:#fff;margin:0px;padding:0px;border-bottom:1px solid #CCC;position:absolute;top:0px;box-shadow:0 4px 6px -5px #BBB;width:100%}#header-wrap{margin:0
+auto;width:100%}h1{margin:0;left:25px;position:absolute;top:4px}h1
+a{display:block;text-indent: -9999px;background:url(/visebuy/assets/img/logo.png) bottom no-repeat;width:200px;height:45px;margin:0
+auto}.filters label, .color_filter
+label{display:block}#filters>form>div{position:relative;padding:0;width:250px;overflow:hidden}#filters>form>div.color_filter{overflow:visible}#filters .color_filter
+ul{width:200px}#image_filter
+form{float:left;margin:0
+0 0 55px;padding:5px
+0;list-style:none}#image_filter{margin-bottom:-13px}#filters h4, .filterLeft, #filters .color_filter
+ul{float:left;left:10px;margin:0;position:relative;top:5px}.filterLeft, #filters .color_filter
+ul{display:inline;margin-left:10px;padding:0;list-style:none}#filters .filters ul li, #filters .color_filter ul
+li{display:inline}#filters .filters li label:hover{cursor:pointer;color:blue}#filters
+.filters{padding-bottom:5px;border-bottom:thin dashed lightgrey}.productCount{display:inline;font-size:0.875em;color:grey}.filterLeft{width:200px}.filterRight{display:none;margin:0px;padding:10px;background-color:white;white-space:nowrap;width:580px;z-index:1}.filterRight
+li{float:left;margin:5px;width:180px}.filterMore{position:relative;float:right;margin:5px
+0px;z-index:3}.filterMore
+a{position:relative;padding:5px
+5px;text-decoration:none;color:black;background-color:white;z-index:2}.filterMore a
+span{font-weight:bold;font-family:serif}.filterMore:hover
+a{border:thin solid #7030A0;border-right:none}.filterMore:hover
+.filterRight{display:block;position:absolute;float:left;left:78px;border:thin solid #7030A0}#text-search{background:url("/visebuy/assets/img/search_bg.png") repeat-x scroll 0 0 #7030A0;position:relative;text-align:center}#text-search
+input#q{width:190px;padding:4px
+31px 4px 4px;margin-top:2px}#homepage #text-search
+input#q{margin:5px}#text-search
+input{vertical-align:top}form
+#campan{cursor:pointer;padding:7px;position:absolute;right:110px;top:5px;display:none;z-index:999}#more_search{position:absolute;margin-left:1000px;top:0}.disappear{display:none}#dropzone,#filezone{display:none;border-bottom:1px solid #CCC}#no_results{font-size:1.3em;text-align:center}#fdropzone,#dropzone{background:url("/visebuy/assets/img/top_background.png") repeat-x scroll center bottom #FFF;box-shadow:0 4px 6px -5px #BBB;color:#AAA;display:none;font-size:1.2em;height:50px;padding:20px;position:fixed;text-align:center;top:auto;margin-left:-90px;width:634px;z-index:1000}#fdropzone{visibility:hidden;display:block}#close_file{position:absolute;top:2px;right:2px;color:red;font:21px arial,sans-serif}#close_file:hover{text-decoration:none}#all_navi{position:absolute;top:11px;right:10px}#filezone{background:url("/visebuy/assets/img/top_background.png") repeat-x scroll center bottom #FFF;box-shadow:0 4px 6px -5px #BBB;color:#000;height:50px;padding:20px;margin-left: -90px;position:fixed;text-align:center;top:auto;width:634px;z-index:1000}#filezone
+p{margin:1em
+0;font-size:1.2em}#content{width:100%}#filtered{background:none repeat scroll 0 0 #fff;border-bottom:1px solid #CCC;box-shadow:0 4px 6px -5px #BBB;padding:5px
+10px;position:fixed;top:10px}#filtered
+dl{margin:0}#filtered dd, #filtered
+dt{display:inline;margin:0}#filtered ul
+li{list-style:none;display:inline-block}.tips{background:url("/visebuy/assets/img/notice.gif") no-repeat scroll 10px center #FFF;box-shadow:0 4px 6px -5px #BBB;display:none;margin:0;padding:1em
+1em 1em 40px;position:absolute;right:10px;text-align:left;top:34px;width:175px;z-index:100}#products
+#content{background:url(/visebuy/assets/img/product_body.png) repeat-y;margin-top:0}#main{margin:0
+auto;margin-top:50px}#additions{margin-bottom:1em}#gallery-wrap{float:left;width:750px;height:318px;border:1px
+solid #EEE;box-shadow:0 5px 11px -5px #AAA}#how_to{background:none repeat scroll 0 0 #FFF;border-bottom:1px solid #CCC;border-left:1px solid #CCC;border-top:1px solid #CCC;box-shadow:0 4px 6px -5px #BBB;line-height:1.75;margin:0;padding:0
+10px;position:absolute;right:0;width:360px;display:none;z-index:100}#how_to
+ul{margin:0;padding:0;list-style:none}#how_to ul
+li{margin-bottom:10px;padding:0
+10px 0 40px}#how_to ul li:nth-child(even){background-color:#F9F9F9}#how_to ul li
+h4{margin:0;border-bottom:1px solid #CCC}#how_to
+h3{border-bottom:5px solid #EEE;font-size:1.4em;margin:0
+0 10px;padding:0
+20px 0 40px}#links_search{background:url("/visebuy/assets/img/link.png") no-repeat scroll 0 center #FFF}#drag_search{background:url("/visebuy/assets/img/drag.png") no-repeat scroll 0 center #FFF}#upload_search{background:url("/static/img/camera.png") no-repeat scroll 0 center #FFF}#text_search{background:url("/static/img/search_img.png") no-repeat scroll 0 center #FFF}.home-products{border-bottom:1px solid #ccc;overflow:hidden;padding:20px
+20px 0;position:relative;border-top:1px solid #ccc}.home-products
+h3{text-indent: -9999px;border-bottom:1px solid #ccc;margin:0;height:20px;padding-bottom:0.5em}#popular-product
+h3{background:url(/visebuy/assets/img/popular_product.png) no-repeat}#new-product
+h3{background:url(/visebuy/assets/img/new_product.png) no-repeat}.home-products
+ol{overflow:hidden;position:absolute;right:20px;top:5px;list-style:none}.home-products ol
+li{float:left;margin-left:40px}.home-products
+ul{overflow:hidden;padding:0}.home-products ul
+li{float:left;width:179px;font-size:0.95em;list-style:none;text-align:center}.home-products
+p{margin:0}#product_details{margin:60px
+0 0 0px}#banner{margin:1em
+0}#products #footer, #default #footer, #category_list
+#footer{margin-left:0;width:920px;border-left:0}#footer{position:relative;padding:10px
+20px;color:#AAA;text-align:center}#footer
+p{margin:0}#footer
+ul{list-style:none outside none;margin:0}#footer ul
+li{display:inline-block;margin-right:20px;padding:0}ul#navmenu-v,ul#navmenu-v li,ul#navmenu-v
+ul{width:190px;margin:0;padding:0;list-style:none}ul#navmenu-v
+li{float:left;position:relative;width:100%}ul#navmenu-v
+li.iehover{z-index:1000}ul#navmenu-v
+ul{display:none;position:absolute;top:0;left:100%;z-index:9999}#default
+#body{float:right;width:750px}#images{float:left;width:205px}#images
+p{margin:20px}#images
+ul{margin-left:225px;margin-top:0;padding:0;width:190px}#images ul
+li{float:left;margin-right:6px;margin-bottom:5px;list-style:none}#details{overflow:hidden;margin:0
+10px 15px 385px;padding:10px
+0 15px 15px}#details
+h3{border-bottom:1px dotted #e5e5e5;padding-bottom:0.5em;margin-top:0;font-size:1.5em}#details dl#product-details{border-bottom:1px dotted #E5E5E5;margin-bottom:2em;padding-bottom:1em}#details dl
+dt{font-weight:bold;font-size:1.1em;float:left;text-align:right}#details dl
+dd{margin-bottom:12px}#details dl dd
+b{font-weight:bold;font-size:2em;color:red}#call-action{background:none repeat scroll 0 0 #FFFCEB;border:1px
+solid #FFE2A6;border-radius:5px 5px 5px 5px;box-shadow:0 0 10px #CCC;font-size:2em;width:300px;margin:0
+auto;padding:5px
+5px 5px 1em;color:red}#call-action
+a{float:right}#call-action
+p{margin:0}#call-action p
+img{vertical-align:bottom}#data{margin-left:170px}#crop_tips{margin-bottom:10px;text-align:center}.loading{background:#fff url(/visebuy/assets/img/ajax-loader.gif) no-repeat bottom center}#productslist
+h4{border-bottom:1px solid #EEE;color:#6C7679;font-size:1.3em;margin:0
+0 15px -9px;padding:0
+0 5px 15px;text-align:center;text-shadow:1px 1px 1px #CCC}#recommended{border-top:1px solid #ccc;background:#F9F9F9;box-shadow:0 5px 10px #DDD;margin:1em
+0}#recommended
+h3{text-indent:0}#recommended
+ul{list-style:none;overflow:hidden;color:#AAA;text-align:center}#recommended
+b{color:#000}#crop_tips
+input{display:none}#more_stuffs img, #images img,#productslist img,.home-products img,#recommended
+img{padding:3px;background:#FFF;border:solid 1px #CCC;box-shadow:0 0 4px #bbb}#more_stuffs a:hover img, #images a:hover img,#productslist a:hover img,.home-products a:hover img,#recommended a:hover img, #images a:focus img,#productslist a:focus img,.home-products a:focus img,#recommended a:focus
+img{background:#E5E5E5}ul.top_list{padding:0px;margin:10px
+0px 0px 0px;width:110px;list-style:none;background-color:white;border:thin solid grey;border-top:2px solid #7030A0;box-shadow:-7px 7px 7px grey}ul.top_list
+li{width:110px;overflow:visible;position:relative;margin:10px
+0px;z-index:3}ul.top_list li
+a{position:relative;font-size:1.8em;padding:4px
+10px 1px 10px;z-index:2}ul.top_list li
+span{display:none;float:right;font-weight:bold;font-size:1.8em;font-family:serif}ul.top_list li a:hover{}ul.top_list
+.sub_list{display:none;position:absolute;font-size:0.6875em;background:#FFF;list-style:none;width:650px;margin:0px
+0px 0px 110px;padding:0px;z-index:1}ul.top_list .sub_list
+h4{margin:5px
+0px 5px 5px}ul.top_list .sub_list h4
+a{color:#000}ul.top_list .sub_list
+ul{margin:0
+0 0 5px;list-style:none;overflow:hidden;padding:0}ul.top_list .sub_list ul
+li{float:left;line-height:2;margin:0px;width:120px}ul.top_list li:hover
+ul.sub_list{display:block;border:thin solid grey;border-top:2px solid #7030A0;box-shadow:7px 7px 7px grey}ul.top_list li:hover
+span{display:block}ul.top_list li:hover
+a{}ul.top_list li:hover ul.sub_list
+a{border:none}#filters
+div.secondary_color{background:none repeat scroll 0 0 #FFF;left:255px;margin-top: -68px;padding:5px
+0;position:relative;display:none}#meta{background:none repeat scroll 0 0 #FFF;float:left;width:250px;margin:0px
+0 0;position:absolute;font-size:1.05em;top:60px}#meta
+h3{border-top:1px solid #EEE;font-size:1.15em;margin:0;padding:5px
+5px 5px 10px;text-shadow:1px 1px 1px #CCC;background:url("/visebuy/assets/img/top_background.png") repeat-x scroll center bottom #FFF}#meta
+p{margin:0}#more_filters{background:none repeat scroll 0 0 #FFF;margin-top:3px;margin-left:190px;padding-left:5px;position:relative}#more_filters
+h3{margin:0;border-bottom:1px solid #ccc}div.pagination{text-align:center}div.display_type{background:url(/visebuy/assets/img/top_background.png) repeat-x bottom left}#more_filters div.display_type
+a{padding:3px
+10px 3px 18px;position:absolute;right:60px;top:0}#more_filters div.display_type a:hover{background-color:#EEE}#productslist
+div.display_type{position:relative}#productslist div.display_type
+a{padding:3px
+10px 3px 18px;position:absolute;right:60px;top: -47px}#productslist div.display_type a:hover{background-color:#EEE}#brand_list,#colours_list{width:120px}#filters
+dl{margin:10px
+0 0 10px;border-bottom:1px solid #EEE}#filters dl
+dt{font-weight:bold;width:35px;float:left}#filters dl
+dd{margin-bottom:2px}.page-links span.active,#filters
+a.selected{text-decoration:underline;color:#fc8ebf}.color_filter
+label{border:2px
+solid #eee;padding:0}.color_filter
+label.selected{border:2px
+solid #000}div#filters form div.color_filter ul
+li{float:left;padding:2px;width:22px;margin-right:0}div.color_filter>ul>li>label>span{width:14px;height:14px;cursor:pointer;text-indent: -9999px;display:block;border:2px
+solid #FFF}.display_price{position:absolute;right:10px;top:0}#productslist{margin-left:260px;min-height:535px;margin-top:105px}#productslist .display_price
+b{font-size:2em}#productslist
+ul{padding:0
+0 15px;margin:0
+0 15px 0;width:100%}#productslist ul.display_list
+li{border-bottom:1px solid #E5E5E5;font-size:0.95em;list-style:none outside none;overflow:hidden;position:relative;margin-bottom:10px;padding-bottom:5px}#productslist
+ul.display_grid{overflow:hidden}#productslist ul.display_list li
+p{margin:0}#productslist ul.display_grid
+li{float:left;width:180px;font-size:0.95em;list-style:none;text-align:center;margin-bottom:2em;border-bottom:5px solid #F8F8F8}#productslist ul.display_grid li
+p{background:none repeat scroll 0 0 #FFF;margin:0
+auto -11px;color:#888;width:85px}#productslist ul.display_grid li
+p.nojs{margin-bottom:0}#productslist ul.display_list li
+div.display_img{float:left}#productslist ul.display_list li
+div.display_details{margin-left:190px}#productslist
+h3{margin-bottom:0.5em}#productslist
+div.duplicate_product{padding-bottom:10px}#productslist div.duplicate_product
+ul.display_grid{margin:10px
+0px 0px 0px;padding:0px
+0px}#duplicate_options{text-align:center}#duplicate_options
+a{padding:5px;border:solid rgb(100,100,100) thin;border-radius:5px;color:black;margin:0px
+10px}#duplicate_options a:hover{text-decoration:none;background-color:rgb(100,100,100);color:white}.page-links a,.page-links
+span.active{padding:3px;display:inline-block}.clearfix:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}.clearfix{display:inline-block}.zoomPad{position:relative;float:left;z-index:5;cursor:crosshair}.zoomPreload{-moz-opacity:0.8;opacity:0.8;filter:alpha(opacity = 80);color:#333;font-size:12px;font-family:Tahoma;text-decoration:none;border:1px
+solid #CCC;background-color:white;padding:8px;text-align:center;background-image:url(/visebuy/assets/images/zoomloader.gif);background-repeat:no-repeat;background-position:43px 30px;z-index:110;width:90px;height:43px;position:absolute;top:0px;left:0px;* width:100px;* height:49px}.zoomPup{overflow:hidden;background-color:#FFF;-moz-opacity:0.6;opacity:0.6;filter:alpha(opacity = 60);z-index:120;position:absolute;border:1px
+solid #CCC;z-index:101;cursor:crosshair}.zoomOverlay{position:absolute;left:0px;top:0px;background:#FFF;z-index:5000;width:100%;height:100%;display:none;z-index:101}.zoomWindow{position:absolute;left:110%;top:40px;background:#FFF;z-index:6000;height:auto;z-index:10000;z-index:110}.zoomWrapper{position:relative;border:1px
+solid #999;z-index:110}.zoomWrapperTitle{display:block;background:#999;color:#FFF;height:18px;line-height:18px;width:100%;overflow:hidden;text-align:center;font-size:10px;position:absolute;top:0px;left:0px;z-index:120;-moz-opacity:0.6;opacity:0.6;filter:alpha(opacity = 60)}.zoomWrapperImage{display:block;position:relative;overflow:hidden;z-index:110}.zoomWrapperImage
+img{border:0px;display:block;position:absolute;z-index:101}.zoomIframe{z-index: -1;filter:alpha(opacity=0);-moz-opacity:0.80;opacity:0.80;position:absolute;display:block}#stats{color:#6C7679}.image_search
+#more_filters{margin-left:190px}#stats
+b{color:#000}#grid-layout{background:url(/visebuy/assets/img/grid_layout.jpg) no-repeat 5px 8px}#list-layout{background:url(/visebuy/assets/img/list_layout.png) no-repeat 5px 8px}#searched{text-align:right;float:left;width:175px;padding-top:7px}#searched
+h3{font-size:1.1em;margin:0;color:#aaa}#search{border-top:1px solid #eee;border-bottom:1px solid #eee;box-shadow:0 4px 6px -5px #BBB;margin-bottom:5px}#search
+a{margin-left:10px}#searched
+p{border-left:1px solid #CCC;border-right:1px dotted #CCC;color:#AAA;height:123px;left:15px;padding:10px
+5px 5px;position:absolute;top: -14px;width:15px}#choices{list-style:none;padding:0;overflow:hidden;margin:0}#choices
+li{float:left;width:50px;cursor:pointer;padding:2px
+4px;text-align:center}#choices
+li.active{color:#fff;background:#c149fa}#telltale{background:none repeat scroll 0 0 #C149FA;color:#FFF;margin:0;padding:3px
+11px;width:180px}.tooltip{background-color:#000;border:1px
+solid #fff;padding:10px
+15px;width:200px;display:none;color:#fff;text-align:left;font-size:12px;z-index:2000;-moz-box-shadow:0 0 10px #000;-webkit-box-shadow:0 0 10px #000}#navis{list-style:none outside none;margin-top:5px;left:-92px;padding:0;position:absolute;z-index:5}#homepage
+#navis{left:46px}#more_stuffs #all_category
+ul{text-align:left}#all_lists{background:none repeat scroll 0 0 #FFF;display:none;z-index:2;box-shadow:0 4px 6px -5px #BBB;margin-top:11px;width:auto;border-bottom:1px solid #CCC}#homepage
+#all_lists{margin-top:5px;width:auto;height:auto;border:none}#pall_lists h3,#all_lists
+h3{float:left;font-size:1.8em;margin:0;padding:0
+10px;text-align:right;width:90px}#navis>li{width:auto}#navis>li>a{font-size:1.4em;color:white;padding:8px
+25px 6px 8px;background:#7030A0 url(/visebuy/assets/img/arrow.png) no-repeat 95%}#homepage #navis>li>a{padding:8px
+25px 8px 8px}#navis>li:hover>a{}#navis li:hover #all_lists, #navis li:hover
+#all_brand{display:block}.category_sub{margin:0
+0 0 190px}p.no_more{font-size:1.3em;text-align:center}#home_box{width:860px;margin:45px
+auto 0;padding:25px;position:relative}#homepage
+h1{margin:0;position:relative;top:0;left:0}#homepage h1
+a{background:url("/visebuy/assets/img/logo.png") no-repeat scroll center bottom transparent;height:45px;text-indent: -9999px;display:block;width:200px;margin:0
+auto}#home_box #fdropzone,#home_box
+#dropzone{line-height:2.2}#homepage #search_box #filezone,#home_box #fdropzone,#home_box
+#dropzone{background:url("/visebuy/assets/img/top_background.png") repeat-x scroll center bottom #FFF;box-shadow:0 4px 6px -5px #BBB;color:#000;height:50px;left:50%;margin-left: -342px;padding:20px;position:fixed;text-align:center;width:634px;top:auto;border-right:1px solid #ccc;border-left:1px solid #ccc;z-index:1000}#search_box{position:relative;margin:5px
+0px 5px 400px;width:600px;z-index:2}#homepage
+#search_box{margin:0px
+0px 0px 40px;width:auto}#search_box
+p{margin:0;text-align:center}#search_box #text-search{margin:0
+auto;width:576px}#homepage #search_box #text-search{margin-left:150px}#image_text{background:white;display:inline-block;margin:5px
+0px;height:26px;vertical-align:bottom}#searched_image_holder{display:inline-block;height:26px;padding-right:3px;background-color:rgb(230,230,230)}#remove_image{color:red;position:relative;vertical-align:top;top:2px;font:21px arial,sans-serif}#remove_image:hover{text-decoration:none}#search_box #text-search
+#searched_image{margin-top:1px}#search_box #text-search
+#q{width:421px;border:none}#homepage #search_box #text-search
+#q{border:2px
+inset}#search_tips,#camera_tips{border-right:1px solid #CCC;width:auto}#search_tips{left:0;right:auto}#more_stuffs{margin:20px
+auto 0;width:860px}#more_stuffs
+h3{border-bottom:1px solid #CCC;margin:0;background:url("/visebuy/assets/img/top_background.png") repeat-x scroll center bottom #FFF;padding:5px
+15px}#more_stuffs ol,#more_stuffs
+ul{padding:0;text-align:center}#more_stuffs ol
+li{display:inline-block;margin-right:15px}#more_stuffs ul
+li{display:inline-block;margin-right:5px}#foot{text-align:center;margin:45px
+0 0}#foot
+ul{margin:0;padding:0
+}#foot
+p{color:#AAA;margin:0}#foot ul
+li{display:inline-block;margin:0
+20px 0 0;padding:0}#static{line-height:1.6;width:750px;margin-left:190px;padding:0
+20px 0 0}#static
+h2{border-bottom:1px solid #CCC;margin-left: -170px;padding-bottom:5px;padding-left:170px}label{display:none}#popular_stuffs{position:relative}#slideshow{margin:0
+auto;width:860px;overflow-x:auto;position:relative}#slideshow #slidesContainer
+.slide{margin:0
+auto;width:840px}#leftControl{cursor:pointer;display:block;margin-top: -10px;position:absolute;left: -40px;top:50%;text-indent: -9999px;background:url("/visebuy/assets/img/left_control.png") no-repeat;display:block;height:40px;width:40px}#rightControl{cursor:pointer;display:block;margin-top: -10px;position:absolute;right: -40px;top:50%;text-indent: -9999px;background:url("/visebuy/assets/img/right_control.png") no-repeat;display:block;height:40px;width:40px}

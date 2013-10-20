@@ -1,0 +1,76 @@
+<?php // display duplicate products ?>
+<?php $temp = 0; $max = 6; ?>
+
+<?php // show before page 1 ?>
+<?php if (isset($duplicateProducts) && ($page_no == 1))
+{
+?>
+
+<h4><?php echo __('results.duplicate_product'); ?></h4>
+<div id="duplicate_options">
+<?php // switch to list view containing duplicate results
+echo '<a href="' . Uri::create('/search/:type/:id/:order/list/duplicate?:filters', 
+				array('type' => Uri::segment(2), 'id' => Uri::segment(3), 'order' => (Uri::segment(4)) ? (Uri::segment(4)) : 'similar', 'filters' => $filters))
+		. '">';
+echo __('results.compare_duplicate');
+echo '</a>';
+
+// button to show extended list
+if (count($duplicateProducts) >= $max && Uri::segment(6) != 'duplicate')
+{
+	echo '<a href="javascript:void(0);" id="show_more">';
+	echo __('results.duplicate_more');
+	echo '</a>';
+}
+?>
+</div>
+
+<div class="duplicate_product">
+<ul class="display_grid">
+	<?php foreach ($duplicateProducts as $p): ?>
+	<?php $p = $duplicateProducts[0]; ?>
+	<li>
+		<a href="<?php echo Uri::create('search/product/:id', array('id' => $p['ProductID'])) ?>">
+		<img class="drag_img" width="160" height="160" data-id="<?php echo $p['ProductImageID'] ?>" title="<?php echo $p['ProductName'] ?>" src="http://msm2.cais.ntu.edu.sg/okbuyimgs/<?php echo $p['ProductImage'] ?>"></a>
+		<p class="nojs"><a href="<?php echo Uri::create('search/create/?id=:id&url=http://msm2.cais.ntu.edu.sg/okbuyimgs/:url', 
+    												array('id' => $p['ProductImageID'], 'url' => $p['ProductImage'])); ?>">搜索相关图片</a></p>
+		<p><?php echo $p['ProductPrice'] ?>元</p>
+		<?php if (isset($debug) && $debug): ?><p><br><?php echo $p['ProductImageID'] ?></p><?php endif; ?>
+		<?php $temp++; ?>
+	</li>
+	<?php // hide the rest ?>
+	<?php if ($temp == $max && Uri::segment(6) != 'duplicate')
+	{
+		echo '</ul><ul class="display_grid duplicate_more">';
+	}
+	?>
+	<?php endforeach; ?>
+</ul>
+</div>
+<?php if (Uri::segment(6) != 'duplicate'): ?>
+<h4><?php echo __('results.similar_product'); ?></h4>
+<?php endif; ?>
+<?php
+}
+?>
+
+<?php // normal products ?>
+<?php if (Uri::segment(6) != 'duplicate'): ?>
+
+<?php /* 
+<h4>第<?php echo $page_no ?>页</h4>
+ */?>
+<ul class="display_grid">
+  <?php foreach ($products as $p): ?>
+  <li>
+    <a href="<?php echo Uri::create('search/product/:id', array('id' => $p['ProductID'])) ?>">
+    <img class="drag_img" width="160" height="160" data-id="<?php echo $p['ProductImageID'] ?>" title="<?php echo $p['ProductName'] ?>" src="http://msm2.cais.ntu.edu.sg/okbuyimgs/<?php echo $p['ProductImage'] ?>"></a>
+    <p class="nojs"><a href="<?php echo Uri::create('search/create/?id=:id&url=http://msm2.cais.ntu.edu.sg/okbuyimgs/:url', 
+    												array('id' => $p['ProductImageID'], 'url' => $p['ProductImage'])); ?>">搜索相关图片</a></p>
+    <p><?php echo $p['ProductPrice'] ?>元</p>
+    <?php if (isset($debug) && $debug): ?><p><br><?php echo $p['ProductImageID'] ?></p><?php endif; ?>
+  </li>
+  <?php endforeach; ?>
+</ul>
+
+<?php endif;?>

@@ -1,0 +1,94 @@
+{% load staticfiles %}
+<div id="header">
+    <link rel="stylesheet" type="text/css" href="{% static "css/jquery-ui-1.8.15.custom.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/imgareaselect-default.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/reset.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/select2.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/colorpick.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/master.css" %}" />
+    <script src="{% static "js/select2.js" %}"></script>
+    <script src="{% static "js/jquery-1.7.1.min.js" %}"></script>
+    <script src="{% static "js/jquery-ui-1.8.17.custom.min.js" %}"></script>
+    <script src="{% static "js/jquery.touch.js" %}"></script>
+    <script src="{% static "js/jquery.imgareaselect.js" %}"></script>
+    <script src="{% static "js/jquery.tools.js" %}"></script>
+    <script src="{% static "js/colorpick.js" %}"></script>
+    <script src="{% static "js/jquery.jqzoom-core-pack.js" %}"></script>
+    <script src="{% static "js/master.js" %}"></script>
+	<h1><a href="{% comment %}<?php echo Uri::create('/') ?>{% endcomment %}">{% comment %}<?php echo __('header.title') ?></a></h1>{% endcomment %}
+	<div id="search_box">
+{#		<?php echo $category_list; ?>#}
+		<form id="text-search" action=""
+{#			<?php#}
+{#			// if search url is set, send text input as filter#}
+{#			if (isset($url))#}
+{#			{#}
+{#				echo $url . '?' . $filters; 				#}
+{#			}#}
+{#			else#}
+{#			{#}
+{#				echo Uri::create("search/create");#}
+{#			}#}
+{#			?>"#}
+		method="post" accept-charset="utf-8">
+			<label for="q">Search for:</label>
+			<div id="image_text">
+{#			<?php if (isset($searched_image)): ?>#}
+				<div id="searched_image_holder">
+				<img src="{% comment %}<?php echo urldecode($searched_image) ?>{% endcomment %}" id="searched_image" width="25" height="25">
+				<a href="{% comment %}<?php echo Uri::create('/'); ?>{% endcomment %}" id="remove_image">×</a>
+				</div>
+{#			<?php endif; ?>#}
+			<input type="text" title="文本搜索  或  图片地址搜索" placeholder="文本搜索  或  图片地址搜索" value="{% comment %}<?php print (isset($searched_query)) ? $searched_query : "" ?>{% endcomment %}"
+			id="q" name="{% comment %}<?php print (isset($url)) ? 'text' : 'q' ?>{% endcomment %}" style="{% comment %}width:<?php print (isset($searched_image)) ? "378px" : "425px" ?>{% endcomment %}">
+			</div>
+			<p id="search_tips" class="tips"><?php echo __('search.placeholder') ?></p>
+			<input type="image" src="{% comment %}<?php echo Uri::create('/'); ?>assets/img/search.png{% endcomment %}" width="100" height="34" alt="{% comment %}<?php echo __('search.submit') ?>{% endcomment %}" border="0">
+			<img src="{% comment %}<?php echo Uri::create('/'); ?>assets/img/camera.png{% endcomment %}" title="{% comment %}<?php echo __('search.cam_icon') ?>{% endcomment %}" alt="{% comment %}<?php echo __('search.cam_icon') ?>{% endcomment %}" width="20" height="14" id="campan">
+			<p id="camera_tips" class="tips">{% comment %}<?php echo __('search.upload_tips') ?>{% endcomment %}</p>
+		</form>
+		<div id="dropzone">
+		  <p>请拖图片到这来寻找相关图片.</p>
+		</div>
+		<div id="fdropzone">
+		  <p>请拖图片到这来寻找相关图片.</p>
+		</div>
+		<div id="filezone">
+		  <a id="close_file" href="#">×</a>
+		  <p>选择一个图片进行图像搜索.</p>
+		  <form id="file-search" enctype="multipart/form-data" action="{% comment %}<?php echo Uri::create("search/create") ?>{% endcomment %}" method="post">
+		<label for="image-search">Search for:</label>
+		<input id="image-search" name="uploadedfile" type="file" />
+		  </form>
+		</div>
+	</div>
+	<p class="nojs" id="more_search"><a href="{% comment %}<?php echo Uri::create('search/create');?>{% endcomment %}">更多搜索选择</a></p>
+</div>
+<div id="main">
+{#	<?php echo $content ?>#}
+</div>
+<div id="footer">
+  <p>{% comment %}<?php echo __('footer.ntu') ?>{% endcomment %}</p>
+  <ul>
+    <li>
+      <a href="{% comment %}<?php echo Uri::create('/p/about') ?>{% endcomment %}"><?php echo __('footer.about') ?></a>
+    </li>
+    <li>
+      <a href="mailto:chhoi@ntu.edu.sg">{% comment %}<?php echo __('footer.careers') ?>{% endcomment %}</a>
+    </li>
+    <li>
+      <a href="mailto:chhoi@ntu.edu.sg">{% comment %}<?php echo __('footer.contact') ?>{% endcomment %}</a>
+    </li>
+{#    <?php /*#}
+    <li>
+      <a href="{% comment %}<?php echo Uri::create('/p/api') ?>{% endcomment %}">API</a>
+    </li>
+    <li>
+      <a href="{% comment %}<?php echo Uri::create('/p/bookmarklet') ?>{% endcomment %}">Bookmarklet</a>
+    </li>
+{#	 */ ?>#}
+    <li>
+      <a href="{% comment %}<?php echo Uri::create('/p/disclaimer') ?>{% endcomment %}">{% comment %}<?php echo __('footer.copy') ?>{% endcomment %}</a>
+    </li>
+  </ul>
+</div>

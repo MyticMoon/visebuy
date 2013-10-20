@@ -1,0 +1,83 @@
+{% load static %}
+<div id="header">
+    <h1><a href="/">{{ header.title }}</a></h1>
+	<div id="search_box">
+{#		<?php echo $category_list; ?>#}
+        {{ category_list }}
+		<div id="dropzone">
+		  <p>请拖图片到这来寻找相关图片.</p>
+		</div>
+        <div id="fdropzone">
+		  <p>请拖图片到这来寻找相关图片.</p>
+		</div>
+        <div id="filezone">
+		  <a id="close_file" href="#">×</a>
+		  <p>选择一个图片进行图像搜索.</p>
+		 <form id="file-search" enctype="multipart/form-data" action="search/create" method="post">
+		<label for="image-search">Search for:</label>
+{#              <form id="text-search" action="#}
+{#                    {% if url %}#}
+{#                        {{ url|add:'?'|add:filters }}#}
+{#                    {% else %}#}
+{#                        {{ "/visebuy/search/create" }}#}
+{#                    {% endif %}#}
+{#                    "#}
+{#                    method="post" accept-charset="utf-8">#}
+                <form id="text-search" action="#" method="post" accept-charset="utf-8">
+                  <label for="q">Search for:</label>
+                  <div id="image_text">
+                      {% if search_image %}
+                      <div id="searched_image_holder">
+                          <img src="{{ searched_image }}" id="searched_image" width="25" height="25">  {% comment %} the searched_image must be encoded before passing to this view<?php echo urldecode($searched_image) ?>{% endcomment %}
+                          <a href="/" id="remove_image">×</a> {% comment %}<?php echo Uri::create('/'); ?>{% endcomment %}
+                      </div>
+                      {% endif %}
+                      <input type="text" title="文本搜索  或  图片地址搜索" placeholder="文本搜索  或  图片地址搜索" value="{% if searched_query %}{{ search_query }}{% else %}{{ "" }}{% endif %}" {% comment %}<?php print (isset($searched_query)) ? $searched_query : "" ?>{% endcomment %}
+{#                             id="q" name="{% comment %}<?php print (isset($url)) ? 'text' : 'q' ?>{% endcomment %}" style="{% comment %}width:<?php print (isset($searched_image)) ? "378px" : "425px" ?>{% endcomment %}">#}
+                            id="q" name="{% if url %}{{ 'text' }}{% else %}{{ 'q' }}{% endif %}" style="width:{% if searched_image %}{{ "378px" }}{% else %}{{ "425px" }}{% endif %}"> {% comment %}<?php print (isset($url)) ? 'text' : 'q' ?>{% endcomment %}{% comment %}width:<?php print (isset($searched_image)) ? "378px" : "425px" ?>{% endcomment %}
+                  </div>
+                  <p id="search_tips" class="tips">{{ search.placeholder }}</p> {% comment %}<?php echo __('search.placeholder') ?>{% endcomment %}
+                  <input type="image" src="{% static "img/search.png" %}" width="100" height="34" alt="search.submit" border="0">  {% comment %}<?php echo Uri::create('/'); ?>assets/img/search.png{% endcomment %}  {% comment %}<?php echo __('search.submit') ?>{% endcomment %}
+                  <img src="{% static "img/camera.png" %}" title="{{ search.cam_icon }}" alt="{{ search.cam_icon }}" width="20" height="14" id="campan"> {% comment %}<?php echo Uri::create('/'); ?>assets/img/camera.png{% endcomment %} {% comment %}<?php echo Uri::create('/'); ?>assets/img/camera.png{% endcomment %} {% comment %}<?php echo __('search.cam_icon') ?>{% endcomment %}
+                  <p id="camera_tips" class="tips">{{ search.upload_tips }}</p> {% comment %}<?php echo __('search.upload_tips') ?>{% endcomment %}
+              </form>
+              <input id="image-search" name="uploadedfile" type="file" />
+          </form>
+        </div>
+    </div>
+	<p class="nojs" id="more_search"><a href="search/create">更多搜索选择</a></p> {% comment %}<?php echo Uri::create('search/create');?>{% endcomment %}
+</div>
+<div id="main">
+{#	<?php echo $content ?>#}
+    {% if content %}
+        {% with "pages/"|add:content|add:".html" as template %}
+        {% include template %}
+        {% endwith %}
+    {% endif %}
+</div>
+<div id="footer">
+  <p>{{ footer.ntu }}</p> {% comment %}<?php echo __('footer.ntu') ?>{% endcomment %}
+  <ul>
+    <li>
+      <a href="/visebuy/page/about/"> {{ footer.about }} About</a>  {% comment %}<?php echo Uri::create('/p/about') ?>{% endcomment %}{% comment %}{% url "visebuy.views.detailpage" offset='about' %}{% endcomment %} {% comment %}<?php echo __('footer.about') ?>{% endcomment %}
+    </li>
+    <li>
+      <a href="mailto:chhoi@ntu.edu.sg">{{ footer.careers }} Careers</a> {% comment %}<?php echo __('footer.careers') ?>{% endcomment %}
+    </li>
+    <li>
+      <a href="mailto:chhoi@ntu.edu.sg">{{ footer.contacts }}Contacts</a> {% comment %}<?php echo __('footer.contact') ?>{% endcomment %}
+    </li>
+    <?php /*
+    <li>
+      <a href="{% comment %}{% url 'views.detailpage' offset='api' %}{% endcomment %}/visebuy/page/api/">API</a>
+    </li>
+    <li>
+      <a href="{% comment %}<?php echo Uri::create('/p/bookmarklet') ?>{% endcomment %} {% comment %}{% url 'views.detailpage' offset='bookmarklet' %}{% endcomment %}/visebuy/page/bookmarklet/">Bookmarklet</a>
+    </li>
+{#	 */ ?>#}
+    <li>
+      <a href="{% comment %}<?php echo Uri::create('/p/disclaimer') ?>{% endcomment %}{% comment %}{% url 'views.detailpage' offset='disclaimer' %}{% endcomment %}/visebuy/page/disclaimer/">{% comment %}<?php echo __('footer.copy') ?>{% endcomment %}Copy right</a>
+    </li>
+  </ul>
+</div>
+

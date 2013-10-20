@@ -1,0 +1,37 @@
+<div id="order">
+	<?php // change layout ?>
+	<b><?php echo __('filters.display.name'); echo ': ';?></b>
+	
+	<?php // grid view ?>
+	<a class="change_layout" href="<?php echo Uri::create('/search/:type/:id/:order/grid/:result?:filters', 
+	array('type' => $type, 'id' => $id, 'order' => $order, 'result' => $result, 'filters' => $filters)); ?>"
+	title="<?php echo __('filters.display.grid'); ?>">
+	<img src="<?php echo Uri::create('/'); ?>assets/img/grid_layout<?php echo ($display == 'grid') ? '_selected' : '' ;?>.jpg"></a>
+	
+	<?php // list view ?>
+	<a class="change_layout" href="<?php echo Uri::create('/search/:type/:id/:order/list/:result?:filters', 
+	array('type' => $type, 'id' => $id, 'order' => $order, 'result' => $result, 'filters' => $filters)); ?>"
+	title="<?php echo __('filters.display.list'); ?>">
+	<img src="<?php echo Uri::create('/'); ?>assets/img/list_layout<?php echo ($display == 'list') ? '_selected' : '' ;?>.png"></a>
+	
+	<?php // change order ?>
+	<b><?php echo __('filters.order.name'); echo': '; ?></b>
+	
+	<?php // similar ?>
+	<?php if ($order == 'similar') { echo '<div id="orderSelected">'; } ?> 
+	<a href="<?php echo Uri::create('/search/:type/:id/similar/:display/:result?:filters', 
+	array('type' => $type, 'id' => $id, 'display' => $display, 'result' => $result, 'filters' => $filters)); ?>"><?php echo __('filters.order.similar'); ?></a>
+	<?php if ($order == 'similar') { echo '</div>'; } ?>
+	
+	<?php // cheapest ?>
+	<?php if ($order == 'asc') { echo '<div id="orderSelected">'; } ?>
+	<a href="<?php echo Uri::create('/search/:type/:id/asc/:display/:result?:filters', 
+	array('type' => $type, 'id' => $id, 'display' => $display, 'result' => $result, 'filters' => $filters)); ?>"><?php echo __('filters.order.asc'); ?></a>
+	<?php if ($order == 'asc') { echo '</div>'; } ?>
+	
+	<?php // most expensive ?>
+	<?php if ($order == 'desc') { echo '<div id="orderSelected">'; } ?>
+	<a href="<?php echo Uri::create('/search/:type/:id/desc/:display/:result?:filters', 
+	array('type' => $type, 'id' => $id, 'display' => $display, 'result' => $result, 'filters' => $filters)); ?>"><?php echo __('filters.order.desc'); ?></a>
+	<?php if ($order == 'desc') { echo '</div>'; } ?>
+</div>

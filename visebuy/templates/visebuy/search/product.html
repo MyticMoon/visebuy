@@ -1,0 +1,91 @@
+<?php if (isset($product)): ?>
+<?php /*<div id="meta" class="clearfix">
+  <div id="search">
+    <form accept-charset="utf-8" method="post" action="<?php echo Uri::create('search/create');?>" id="text-search">
+      <label for="q">Search for:</label>
+      <input type="text" id="q" value="" placeholder="搜索图像和文本" title="搜索图像和文本" name="q" autocomplete="off">
+      <p class="tips" id="search_tips">您可以输入图片链接或搜索字词或拖图像到这来 ，进行搜索。</p>
+      <img width="20" height="14" id="campan" alt="上载图片" title="上载图片" src="<?php echo Uri::create('/');?>assets/img/camera.png" style="display: inline;">
+      <p class="tips" id="camera_tips" style="display: none;">你也可以上传自己的形象。</p> 
+    </form>
+    <p id="more_search" class="nojs" style="display: none;"><a href="<?php echo Uri::create('search/create');?>">更多搜索选择</a></p>
+    <div id="dropzone">
+      <p>请拖图像到这来寻找相关图片.</p>
+    </div>
+    <div id="fdropzone" class="ui-droppable">
+      <p>请拖图像到这来寻找相关图片.</p>
+    </div>
+    <div id="filezone">
+      <p>选择一个图像进行图像搜索. <a href="#" id="close_file">关闭</a>.</p>
+      <form method="post" action="<?php echo Uri::create('search/create');?>" enctype="multipart/form-data" id="file-search">
+        <label for="image-search">Search for:</label>
+        <input type="file" name="uploadedfile" id="image-search">
+      </form>
+    </div>
+  </div>
+</div>
+*/?>
+
+<div id="product_details">
+  <div id="images">
+  	<?php /*
+    <p><a href="http://msm.cais.ntu.edu.sg/visebuy/assets/photos<?php print str_replace('_TB', '_BG', $product['ProductImage']['PrimaryImage']) ?>" class="MYCLASS" title="MYTITLE" rel="gal1">  
+        <img src="http://msm.cais.ntu.edu.sg/visebuy/assets/photos<?php print $product['ProductImage']['PrimaryImage'] ?>" width="160">    
+    </a></p>          
+    <ul>
+    <li><a href="javascript:void(0);" rel="{gallery: 'gal1', smallimage: 'http://msm.cais.ntu.edu.sg/visebuy/assets/photos<?php print str_replace('_TB', '_BG', $product['ProductImage']['PrimaryImage'])  ?>',largeimage: 'http://msm.cais.ntu.edu.sg/visebuy/assets/photos<?php print str_replace('_TB', '_BG', $product['ProductImage']['PrimaryImage']) ?>'}">  
+          <img src="http://msm.cais.ntu.edu.sg/visebuy/assets/photos<?php print $product['ProductImage']['PrimaryImage'] ?>" width="60"></a></li>
+    <?php if (isset($product['thumbnails'])): foreach ($product['thumbnails'] as $image): ?>
+    <li><a href="javascript:void(0);" rel="{gallery: 'gal1', smallimage: 'http://msm.cais.ntu.edu.sg/visebuy/assets/photos<?php print str_replace('_TB', '_BG', $image) ?>',largeimage: 'http://msm.cais.ntu.edu.sg/visebuy/assets/photos<?php print str_replace('_TB', '_BG', $image) ?>'}">  
+        <img src="http://msm.cais.ntu.edu.sg/visebuy/assets/photos<?php print $image ?>" width="60">  
+    </a></li>
+    <?php endforeach; endif; ?>
+    </ul>
+    */ ?>
+    
+    <p><a href="http://msm2.cais.ntu.edu.sg/okbuyimgs/<?php print $product['ProductImage']['PrimaryImage'] ?>" class="MYCLASS" title="MYTITLE" rel="gal1">  
+        <img src="http://msm2.cais.ntu.edu.sg/okbuyimgs/<?php print $product['ProductImage']['PrimaryImage'] ?>" width="160">    
+    </a></p>          
+    <ul>
+    <li><a href="javascript:void(0);" rel="{gallery: 'gal1', smallimage: 'http://msm2.cais.ntu.edu.sg/okbuyimgs/<?php print $product['ProductImage']['PrimaryImage']  ?>',largeimage: 'http://msm2.cais.ntu.edu.sg/okbuyimgs/<?php print $product['ProductImage']['PrimaryImage'] ?>'}">  
+          <img src="http://msm2.cais.ntu.edu.sg/okbuyimgs/<?php print $product['ProductImage']['PrimaryImage'] ?>" width="60"></a></li>
+    <?php if (isset($product['thumbnails'])): foreach ($product['thumbnails'] as $image): ?>
+    <li><a href="javascript:void(0);" rel="{gallery: 'gal1', smallimage: 'http://msm2.cais.ntu.edu.sg/okbuyimgs/<?php print $image ?>',largeimage: 'http://msm2.cais.ntu.edu.sg/okbuyimgs/<?php print $image ?>'}">  
+        <img src="http://msm2.cais.ntu.edu.sg/okbuyimgs/<?php print $image ?>" width="60">  
+    </a></li>
+    <?php endforeach; endif; ?>
+    </ul>
+  </div>
+  <div id="details">
+    <h3><?php echo $product['ProductName'] ?></h3>   
+    <dl id="product-details">
+      <dt>品牌 ：</dt>
+      <dd><?php echo $product['ProductBrand'] ?></dd>
+      <dt>商家 ：</dt>
+      <dd><?php echo $product['ProductMerchant'] ?></dd>
+      <dt>颜色 ：</dt>
+      <dd><?php echo $product['ProductColor'] ?></dd>    
+      <dt>描述 ：</dt>
+      <dd><?php echo $product['ProductDesc'] ?></dd>    
+    </dl>
+    <div id="call-action">
+      <p><b><?php echo $product['ProductPrice'] ?></b>元 <a href="http://okbuy.com<?php echo $product['ProductURL'] ?>"><img src="http://msm.cais.ntu.edu.sg/visebuy/assets/img/add_cart.png"></a></p>    
+    </div>
+  </div>
+
+  <div class="home-products" id="recommended">
+    <h3><span>产品推荐</span></h3>
+    <ul>
+      <?php foreach ($product['Recommendation']['RecommendProduct'] as $r): ?>
+        <li>
+          <a href="<?php echo Uri::create('search/product/:product', array('product' => $r['ProductID'])) ?>"><img width="160" src="http://msm2.cais.ntu.edu.sg/okbuyimgs/<?php echo $r['ProductImage'] ?>"></a>
+          <p><b><?php echo $r['ProductPrice'] ?></b>元</p>
+        </li>
+        <?php endforeach; ?>
+    </ul>
+  </div>
+
+  <?php else: ?>
+  <h3><?php echo __('results.no_results') ?></h3>
+  <?php endif; ?>
+</div>

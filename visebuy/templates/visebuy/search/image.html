@@ -1,0 +1,24 @@
+<?php echo $meta ?>
+
+<?php echo $filters_opt ?>
+
+<div id="productslist" class="image_page">    
+  
+<?php if ($total > 0): ?>
+ 
+ <?php echo $display ?>
+ 
+ <?php if (isset($pages)): ?>
+ <div class="pagination">
+   <span class="page-links">
+   <?php foreach($pages as $p): ?>
+     <?php echo html_entity_decode($p) ?>
+   <?php endforeach; ?>
+   </span>
+ </div>
+ <?php endif; ?>
+ 
+<?php else: ?>
+    <p id="no_results"><?php echo __('results.no_results') ?></p>
+<?php endif; ?>
+</div>

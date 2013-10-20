@@ -1,0 +1,73 @@
+  <div class="category_sub">
+<h2>如果你在这里，您可能关闭了JavaScript或CSS。下面列出了几种方法，你可以使用我们的搜索引擎。</h2>
+
+<h3>图片上传</h3>
+<form enctype="multipart/form-data" action="<?php echo Uri::create('search/create');?>" method="POST">
+  <input name="uploadedfile" type="file" />
+  <input type="submit" value="Upload" />
+</form>
+
+<h3>网址上传</h3>
+<form action="<?php echo Uri::create('search/create');?>" method="post" accept-charset="utf-8">
+  <label for="q">Search for:</label>
+  <input type="text" name="q" title="<?php print (isset($searched_query)) ? $searched_query : "搜索图像和文本" ?>" placeholder="<?php print (isset($searched_query)) ? $searched_query : "搜索图像和文本" ?>" value="" id="urlsearch">
+  <input type="submit" value="Continue &rarr;">
+</form>
+
+<h3>全文搜索</h3>
+<form action="<?php echo Uri::create('search/create');?>" method="post" accept-charset="utf-8">
+  <label for="q">Search for:</label>
+  <input type="text" placeholder="<?php print (isset($searched_query)) ? $searched_query : "搜索图像和文本" ?>" title="<?php print (isset($searched_query)) ? $searched_query : "搜索图像和文本" ?>" name="q" value="" id="q">
+  <input type="submit" value="Continue &rarr;">
+</form>
+
+<?php /*
+<h3>API全文搜索</h3>
+<form action="<?php echo Uri::create('api/search/create');?>" method="post" accept-charset="utf-8">
+  <label for="q">Search for:</label>
+  <input type="text" placeholder="<?php print (isset($searched_query)) ? $searched_query : "搜索图像和文本" ?>" title="<?php print (isset($searched_query)) ? $searched_query : "搜索图像和文本" ?>" name="q" value="" id="q">
+  <input type="submit" value="Continue &rarr;">
+</form>
+
+
+<h3>Test API for combined filters</h3>
+<form action="<?php echo Uri::create('search/create');?>" method="post" accept-charset="utf-8">
+  <label for="q">Search for:</label>
+  <input type="text" name="query" value="puma">
+  <input type="text" name="type" value="text">
+
+  <input type="checkbox" name="colours[]" value="Red" /> 
+  <input type="checkbox" name="colours[]" value="Blu" /> 
+  <input type="checkbox" name="colours[]" value="Green" /> 
+  <input type="checkbox" name="colours[]" value="Purple" /> 
+  <input type="checkbox" name="colours[]" value="Beige" /> 
+
+  <br> <br>
+
+<dl id="color_filter"> 
+         <dt>颜色</dt>
+<!--          <dd><a  href="/visebuy/search/text/puma/all/all/grid">全部</a></dd> -->
+               
+         <dd><label><input type="checkbox" value="白色" name="colours"> 白色</label></dd>
+          <!-- <a  href="/visebuy/search/text/puma/color-白色/all/grid">白色</a></dd> -->
+               
+         <dd><label><input type="checkbox" value="黑色" name="colours"> 黑色</label></dd>
+          <!-- <a  href="/visebuy/search/text/puma/color-黑色/all/grid">黑色</a></dd> -->
+               
+         <dd><label><input type="checkbox" value="棕色" name="colours"> 棕色</label></dd>
+          <!-- <a  href="/visebuy/search/text/puma/color-棕色/all/grid">棕色</a></dd> -->
+               
+         <dd><label><input type="checkbox" value="粉色" name="colours"> 粉色</label></dd>
+          <!-- <a  href="/visebuy/search/text/puma/color-粉色/all/grid">粉色</a></dd> -->
+               
+         <dd><label><input type="checkbox" value="蓝色" name="colours"> 蓝色</label></dd>
+          <!-- <a  href="/visebuy/search/text/puma/color-蓝色/all/grid">蓝色</a></dd> -->
+               
+         <dd><label><input type="checkbox" value="红色" name="colours"> 红色</label></dd>
+          <!-- <a  href="/visebuy/search/text/puma/color-红色/all/grid">红色</a></dd> -->
+                </dl>
+
+  <input type="submit" value="Continue &rarr;">
+</form>
+ */ ?>
+</div>

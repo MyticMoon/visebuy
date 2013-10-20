@@ -1,0 +1,334 @@
+<div id="meta" class="clearfix">  
+  <?php /*<div id="search">
+    <form id="text-search" action="<?php echo Uri::create("search/create") ?>" method="post" accept-charset="utf-8">
+      <label for="q">Search for:</label>
+      <input type="text" autocomplete="off" name="q" title="搜索图像和文本" placeholder="搜索图像和文本" value="<?php print (isset($meta['searched_query'])) ? $meta['searched_query'] : "" ?>" id="q">
+      <p id="search_tips" class="tips"><?php echo __('search.placeholder') ?></p>
+      <img src="<?php echo Uri::create('/');?>assets/img/camera.png" title="<?php echo __('search.cam_icon') ?>" alt="<?php echo __('search.cam_icon') ?>" width="20" height="14" id="campan">
+      <p id="camera_tips" class="tips"><?php echo __('search.upload_tips') ?></p> 
+    </form>
+    <p class="nojs" id="more_search"><a href="<?php echo Uri::create('search/create');?>">更多搜索选择</a></p>
+    <div id="dropzone">
+      <p>请拖图像到这来寻找相关图片.</p>
+    </div>
+    <div id="fdropzone">
+      <p>请拖图像到这来寻找相关图片.</p>
+    </div>
+    <div id="filezone">
+      <p>选择一个图像进行图像搜索. <a id="close_file" href="#">关闭</a>.</p>
+      <form id="file-search" enctype="multipart/form-data" action="<?php echo Uri::create("search/create") ?>" method="post">
+        <label for="image-search">Search for:</label>
+        <input id="image-search" name="uploadedfile" type="file" />
+      </form>
+    </div>
+  </div>
+   */ ?>
+
+  <div id="filters">
+  	<?php /* debug print for selected filters
+  	<?php foreach ($meta['filters'] as $k => $f): ?>
+  		<?php echo("$k $f") ?>
+  	<?php endforeach; ?>
+	 */ ?>
+    <?php if (isset($meta['searched_image'])): ?>
+    <div id="image_filter" class="clearfix">
+      <?php //<h4>剪切</h4> ?>      
+      <form action="<?php echo Uri::create("search/create") ?>" method="post" accept-charset="utf-8" id="crop_tips">
+        <p><img src="<?php echo urldecode($meta['searched_image']) ?>" width="170"></p>
+        <input type="hidden" name="q" value="<?php echo urldecode($meta['searched_image']) ?>" id="q">
+        <input type="hidden" name="x1" value="" />
+        <input type="hidden" name="y1" value="" />
+        <input type="hidden" name="x2" value="" />
+        <input type="hidden" name="y2" value="" />
+        <input type="submit" value="指定区域搜索" id="crop_submit">
+      </form>
+    </div>
+    <?php endif; ?>
+    <form id="filter_form" action="<?php echo $url ?>" method="get" accept-charset="utf-8">
+      <?php // filter section simply not displayed instead of not being run. caused problem with filter not selected. applies to all further filters ?>
+      <?php // only run if not gender search ?>
+      <?php if ($meta['type'] != 'gender'): ?>
+      <?php // if gender filter selected, do 1 selected gender filter but hidden?>
+      <?php if (isset($meta['filters']['gender'])): ?>
+      <span style="display:none">
+      <div class="filters">
+		<h4><?php echo __('filters.gender') ?></h4>
+		  <ul>
+		  	<li><label><input type="radio" checked="checked" name="gender" value="<?php echo $meta['filters']['gender'] ?>"></label></li>
+		  </ul>
+      </div>
+      </span>
+      <?php // otherwise output all choices ?>
+      <?php elseif (isset($unselectedFilters['Gender'])): ?>
+      <?php // only output if more than 1 option ?>
+      <?php $i = false;
+      		foreach ($unselectedFilters['Gender'] as $v)
+      		{
+      			foreach ($v as $v1) {
+      			 	$i = is_array($v1);
+					break;
+      			 } 
+			}
+			if ($i): ?>
+      <div class="filters">
+        <h4><?php echo __('filters.gender') ?></h4>
+          <ul class="filterLeft">
+          	<?php foreach ($unselectedFilters['Gender'] as $item): ?>
+          	<?php foreach ($item as $g): ?> 
+          		<li><label><input class="nojs" type="radio" name="gender" value="<?php echo $g['ItemName'] ?>"> <?php echo $g['ItemName'] ?> <div class="productCount">(<?php echo $g['ItemCount'] ?>)</div></label></li>
+          	<?php endforeach; ?>
+          	<?php endforeach; ?>
+          </ul>
+      </div>
+      <?php endif; ?>
+      <?php endif; ?>
+      <?php endif; ?>
+
+	  <?php // only run if not category search ?>
+      <?php if ($meta['type'] != 'category'): ?>
+      <?php // if category filter selected, do 1 selected category filter but hidden ?> 
+      <?php if (isset($meta['filters']['category'])): ?>
+      <span style="display:none">
+      <div class="filters">
+        <h4><?php echo __('filters.category') ?></h4>
+          <ul>
+          	<li><label><input type="radio" checked="checked" name="category" value="<?php echo $meta['filters']['category'] ?>"></label></li>
+          </ul>
+      </div>   
+      </span>
+      <?php // otherwise output all choices ?>
+      <?php elseif (isset($unselectedFilters['Category'])): ?>
+      <?php // only output if more than 1 option ?>
+      <?php $i = false; $optionCount = 0;
+      		foreach ($unselectedFilters['Category'] as $v)
+      		{
+      			foreach ($v as $v1) {
+      			 	$i = is_array($v1);
+					$optionCount = count($v);
+					break;
+      			 } 
+			}
+			if ($i): ?>
+							<?php // if more than 4 choices add 2nd list to the right ?>
+      <div class="filters" <?php print($optionCount > 4) ? 'style="height:120px; overflow:visible;"' : '' ?>>
+        <h4><?php echo __('filters.category') ?></h4>
+        <?php // calculate top for list on the right
+        	if ($optionCount > 4)
+			{
+				$i = 0;
+				$rightTop = -2 - (ceil(($optionCount - 4) / 3) / 2 * 31);
+			}
+        ?>
+          <ul class="filterLeft">
+          	<?php foreach ($unselectedFilters['Category'] as $item): ?>
+          	<?php foreach ($item as $c): ?> 
+          		<li><label><input class="nojs" type="radio" name="category" value="<?php echo $c['ItemName'] ?>"> <?php echo $c['ItemName'] ?> <div class="productCount">(<?php echo $c['ItemCount'] ?>)</div></label></li>
+          		<?php // add list to the right
+          		if ($optionCount > 4)
+				{
+				  	$i++;
+					if ($i == 4)
+					{
+						print('<div class="filterMore"><a href="#">');
+						echo __('filters.filterMore');
+						print(' <span>></span></a><ul class="filterRight" style="top:' . $rightTop . 'px">');
+					}
+				}
+				?>
+          	<?php endforeach; ?>
+          	<?php endforeach; ?>
+          </ul>
+          <?php print($optionCount > 4) ? '</div></ul>' : '' ?>
+      </div>
+      <?php endif; ?>
+      <?php endif; ?>
+      <?php endif; ?>
+
+      <?php // if style filter selected, do 1 selected style filter but hidden?>
+      <?php if (isset($meta['filters']['style'])): ?>
+      <span style="display:none">
+      <div class="filters">
+        <h4><?php echo __('filters.style') ?></h4>
+          <ul>
+          	<li><label><input type="radio" checked="checked" name="style" value="<?php echo $meta['filters']['style'] ?>"></label></li>
+          </ul>
+      </div>  
+      </span>
+      <?php // otherwise output all choices ?>
+      <?php elseif (isset($unselectedFilters['Style'])): ?>
+      <?php // only output if more than 1 option ?>
+      <?php $i = false; $optionCount = 0;
+      		foreach ($unselectedFilters['Style'] as $v)
+      		{
+      			foreach ($v as $v1) {
+      			 	$i = is_array($v1);
+					$optionCount = count($v);
+					break;
+      			 } 
+			}
+			if ($i): ?>
+							<?php // if more than 4 choices add 2nd list to the right ?>
+      <div class="filters" <?php print($optionCount > 4) ? 'style="height:120px; overflow:visible;"' : '' ?>>
+        <h4><?php echo __('filters.style') ?></h4>
+        <?php // calculate top for list on the right
+        	if ($optionCount > 4)
+			{
+				$i = 0;
+				$rightTop = -2 - (ceil(($optionCount - 4) / 3) / 2 * 31);
+			}
+        ?>
+          <ul class="filterLeft">
+          	<?php foreach ($unselectedFilters['Style'] as $item): ?>
+          	<?php foreach ($item as $s): ?> 
+          		<li><label><input class="nojs" type="radio" name="style" value="<?php echo $s['ItemName'] ?>"> <?php echo $s['ItemName'] ?> <div class="productCount">(<?php echo $s['ItemCount'] ?>)</div></label></li>
+          		<?php // add list to the right
+          		if ($optionCount > 4)
+				{
+				  	$i++;
+					if ($i == 4)
+					{
+						print('<div class="filterMore"><a href="#">');
+						echo __('filters.filterMore');
+						print(' <span>></span></a><ul class="filterRight" style="top:' . $rightTop . 'px">');
+					}
+				}
+				?>
+          	<?php endforeach; ?>
+          	<?php endforeach; ?>
+          </ul>
+          <?php print($optionCount > 4) ? '</div></ul>' : '' ?>
+      </div>
+      <?php endif; ?>
+      <?php endif; ?>
+
+      <?php // only run if not brand search ?>
+      <?php if ($meta['type'] != 'brand'): ?>
+      <?php // if brand filter selected, do 1 selected brand filter but hidden?>
+      <?php if (isset($meta['filters']['brand'])): ?>
+      <span style="display:none">
+      <div class="filters">
+        <h4><?php echo __('filters.brand') ?></h4>
+          <ul>
+          	<li><label><input type="radio" checked="checked" name="brand" value="<?php echo $meta['filters']['brand'] ?>"></label></li>
+          </ul>
+      </div>
+      </span>
+      <?php // otherwise output all choices ?>
+      <?php elseif (isset($unselectedFilters['Brand'])): ?>
+      <?php // only output if more than 1 option ?>
+      <?php $i = false; $optionCount = 0;
+      		foreach ($unselectedFilters['Brand'] as $v)
+      		{
+      			foreach ($v as $v1) {
+      			 	$i = is_array($v1);
+					$optionCount = count($v);
+					break;
+      			 } 
+			}
+			if ($i): ?>
+							<?php //if more than 4 choices add 2nd list to the right ?>
+      <div class="filters" <?php print($optionCount > 4) ? 'style="height:120px; overflow:visible;"' : '' ?>>
+        <h4><?php echo __('filters.brand') ?></h4>
+        <?php // calculate top for list on the right
+        	if ($optionCount > 4)
+			{
+				$i = 0;
+				$rightTop = -2 - (ceil(($optionCount - 4) / 3) / 2 * 31);
+			}
+        ?>
+          <ul class="filterLeft">
+          	<?php foreach ($unselectedFilters['Brand'] as $item): ?>
+          	<?php foreach ($item as $b): ?> 
+          		<li><label><input class="nojs" type="radio" name="brand" value="<?php echo $b['ItemName'] ?>"> <?php echo $b['ItemName'] ?> <div class="productCount">(<?php echo $b['ItemCount'] ?>)</div></label></li>
+          		<?php // add list to the right
+          		if ($optionCount > 4)
+				{
+				  	$i++;
+					if ($i == 4)
+					{
+						print('<div class="filterMore"><a href="#">');
+						echo __('filters.filterMore');
+						print(' <span>></span></a><ul class="filterRight" style="top:' . $rightTop . 'px">');
+					}
+				}
+				?>
+          	<?php endforeach; ?>
+          	<?php endforeach; ?>
+          </ul>
+          <?php print($optionCount > 4) ? '</div></ul>' : '' ?>
+      </div>
+      <?php endif; ?>
+      <?php endif; ?>   
+      <?php endif; ?>
+
+      <?php if (isset($meta['filters']['pc'])): ?>
+	  <span style="display:none">
+		<div id="prim_colour" class="color_filter"> 
+        	<h4><?php echo __('filters.primaryColor') ?></h4>
+        	<ul>
+        		<li><label><input type="radio" checked="checked" name="pc" value="<?php echo $meta['filters']['pc']; ?>"></label></li>
+        	</ul>
+		</div>
+	  </span>
+	  <?php else: ?>
+      <div id="prim_colour" class="color_filter"> 
+        <h4><?php echo __('filters.primaryColor') ?></h4>
+        <ul>
+          <?php foreach ($colours as $c => $d): ?>      
+          <li><label <?php print (isset($meta['filters']['pc']) && $c == $meta['filters']['pc']) ? 'class="selected"' : '' ?>>
+          	<input class="nojs" type="radio" name="pc" <?php print (isset($meta['filters']['pc']) && $c == $meta['filters']['pc']) ? 'checked="checked"' : '' ?> value="<?php echo $c ?>"> <span style="background-color: rgb(<?php echo $d ?>);"><?php echo $c ?></span>
+          	</label>
+          </li>
+          <?php endforeach; ?>
+          <?php /*
+          <li><label <?php print (isset($meta['filters']['pc']) && "cpc" == $meta['filters']['pc']) ? 'class="selected"' : '' ?>> 
+          	<input class="nojs" type="radio" name="pc" value="cpc"> 
+            <select name="cpc" id="primary_picker">
+            <?php foreach ($advanced_colours as $k): ?>
+                <option value='<?php echo $k ?>' <?php print (isset($meta['filters']['cpc']) && ($k == $meta['filters']['cpc'])) ? 'selected="selected"' : '' ?>><?php echo $k ?></option>
+            <?php endforeach; ?>
+            </select>
+            </label>
+          </li>
+		  */?>
+        </ul>
+      </div>
+      <?php endif; ?>
+
+      <?php if (isset($meta['filters']['sc'])): ?>
+	  <span style="display:none">
+		<div id="sec_colour" class="color_filter"> 
+        	<h4><?php echo __('filters.secondaryColor') ?></h4>
+        	<ul>
+        		<li><label><input type="radio" checked="checked" name="sc" value="<?php echo $meta['filters']['sc']; ?>"></label></li>
+        	</ul>
+		</div>
+	  </span>
+	  <?php else: ?>
+      <div id="sec_colour" class="color_filter clearfix"> 
+        <h4><?php echo __('filters.secondaryColor') ?></h4>
+        <ul>
+          <?php foreach ($colours as $c => $d): ?>      
+          <li><label <?php print (isset($meta['filters']['sc']) && $c == $meta['filters']['sc']) ? 'class="selected"' : '' ?>>
+          	<input class="nojs" type="radio" name="sc" <?php print (isset($meta['filters']['sc']) && $c == $meta['filters']['sc']) ? 'checked="checked"' : '' ?> value="<?php echo $c ?>"> <span style="background-color: rgb(<?php echo $d ?>);"><?php echo $c ?></span>
+          	</label>
+          </li>
+          <?php endforeach; ?>
+          <?php /*
+          <li><label <?php print (isset($meta['filters']['sc']) && "csc" == $meta['filters']['sc']) ? 'class="selected"' : '' ?>> <input class="nojs" type="radio" name="sc" value="csc"> 
+            <select name="csc" id="secondary_picker">
+            <?php foreach ($advanced_colours as $k): ?>
+                <option value='<?php echo $k ?>' <?php print (isset($meta['filters']['csc']) && ($k == $meta['filters']['csc'])) ? 'selected="selected"' : '' ?>><?php echo $k ?></option>
+            <?php endforeach; ?>
+            </select>
+            </label></li>
+		   */ ?>
+        </ul>
+      </div>
+      <?php endif; ?>
+
+      <input type="submit" value="应用筛选条件" class='nojs'>
+
+    </form>
+  </div>
+</div>

@@ -1,0 +1,155 @@
+<div id="home_box">
+  <h1><a href="<?php echo Uri::create('/') ?>">VISEBuy</a></h1>
+  <div id="search_box">        
+{#    <?php echo $category_list; ?>#}
+    
+    <form id="text-search" action="{% comment %}<?php echo Uri::create("search/create") ?>{% endcomment %}visebuy/search/create" method="post" accept-charset="utf-8">
+      <label for="q">Search for:</label>      
+      <input type="text" name="q" title="{% comment %}<?php print (isset($searched_query)) ? $searched_query : "文本搜索  或  图片地址搜索" ?>{% endcomment %}" placeholder="{% comment %}<?php print (isset($searched_query)) ? $searched_query : "文本搜索  或  图片地址搜索" ?>{% endcomment %}" value="" id="q">
+              <p id="search_tips" class="tips">{% comment %}<?php echo __('search.placeholder') ?>{% endcomment %}</p>
+      <input type="image" src="{% comment %}<?php echo Uri::create(''); ?>assets/img/search.png{% endcomment %}" width="100" height="34" alt="{% comment %}<?php echo __('search.submit') ?>{% endcomment %}" border="0">
+      <img src="{% comment %}<?php echo Uri::create(''); ?>assets/img/camera.png{% endcomment %}" title="{% comment %}<?php echo __('search.cam_icon') ?>{% endcomment %}" alt="{% comment %}<?php echo __('search.cam_icon') ?>{% endcomment %}" width="20" height="14" id="campan">
+            <p id="camera_tips" class="tips">{% comment %}<?php echo __('search.upload_tips') ?>{% endcomment %}</p>
+    </form>
+    <div id="dropzone">
+      <p>请拖图片到这来寻找相关图片.</p>
+    </div>
+    <div id="fdropzone">
+      <p>请拖图片到这来寻找相关图片.</p>
+    </div>
+    <div id="filezone">
+      <a id="close_file" href="#">×</a>
+      <p>选择一个图片进行图像搜索.</p>
+      <form id="file-search" enctype="multipart/form-data" action="{% comment %}<?php echo Uri::create("search/create") ?>{% endcomment %}" method="post">
+          <label for="image-search">Search for:</label>        
+        <input id="image-search" name="uploadedfile" type="file" />
+      </form>
+    </div>
+    <p class="nojs"><a href="{% comment %}<?php echo Uri::create('search/create'); ?>{% endcomment %}">更多搜索选择</a></p>
+  </div>
+
+
+
+
+
+<div id="more_stuffs">
+  <div id="popular_stuffs">
+    <div id="slideshow">
+        <h3>热门图像搜索</h3>
+        <div class="slide">
+          <ul>
+    <li>
+    <a href="{% comment %}<?php echo Uri::create('search/create/?id=1&url=http://msm2.cais.ntu.edu.sg/okbuyimgs/20c/c5de7489c1508c52a5ad08618d55020c.jpg');?>{% endcomment %}">
+    	<img width="150" height="170" src="http://msm2.cais.ntu.edu.sg/okbuyimgs/20c/c5de7489c1508c52a5ad08618d55020c.jpg" title="度假随意慵懒翻绒牛皮平底乐福鞋" data-id="1" class="drag_img ui-draggable"></a>
+  </li>
+    <li>
+    <a href="<?php echo Uri::create('search/create/?id=27662&url=http://msm2.cais.ntu.edu.sg/okbuyimgs/0e6/ec80058be3764570e289f40ec29310e6.jpg');?>">
+    	<img width="150" height="170" src="http://msm2.cais.ntu.edu.sg/okbuyimgs/0e6/ec80058be3764570e289f40ec29310e6.jpg" title="波斯米亚风串珠牛皮花纹工字坡跟凉鞋" data-id="27662" class="drag_img ui-draggable"></a>
+  </li>
+    <li>
+    <a href="<?php echo Uri::create('search/create/?id=44939&url=http://msm2.cais.ntu.edu.sg/okbuyimgs/80f/8a0aae8f4e4433d3766c2ee9ce07780f.jpg');?>">
+    	<img width="150" height="170" src="http://msm2.cais.ntu.edu.sg/okbuyimgs/80f/8a0aae8f4e4433d3766c2ee9ce07780f.jpg" title="舒适质感绒面皮保暖低帮平底皮靴" data-id="44939" class="drag_img ui-draggable"></a>
+  </li>
+    <li>
+    <a href="<?php echo Uri::create('search/create/?id=57187&url=http://msm2.cais.ntu.edu.sg/okbuyimgs/6c4/255c5a40857a8337f8c88edf8cb3a6c4.jpg');?>">
+    	<img width="150" height="170" src="http://msm2.cais.ntu.edu.sg/okbuyimgs/6c4/255c5a40857a8337f8c88edf8cb3a6c4.jpg" title="英伦慵懒户外休闲舒适透气帆布鞋豆豆鞋" data-id="57187" class="drag_img ui-draggable"></a>
+  </li>
+    <li>
+    <a href="<?php echo Uri::create('search/create/?id=90225&url=http://msm2.cais.ntu.edu.sg/okbuyimgs/1db/3d469389fdb693e89ffcf464104751db.jpg');?>">
+    	<img width="150" height="170" src="http://msm2.cais.ntu.edu.sg/okbuyimgs/1db/3d469389fdb693e89ffcf464104751db.jpg" title="贝雅休闲凉鞋洞洞鞋沙滩鞋" data-id="90225" class="drag_img ui-draggable"></a>
+  </li>
+		  
+            </ul>
+        </div>
+        <div class="slide">
+          <ul>
+    <li>
+    <a href="<?php echo Uri::create('search/create/?id=146923&url=http://msm2.cais.ntu.edu.sg/okbuyimgs/af0/08823f5016032a0d7d70662d07f99af0.jpg');?>">
+    	<img width="150" height="170" src="http://msm2.cais.ntu.edu.sg/okbuyimgs/af0/08823f5016032a0d7d70662d07f99af0.jpg" title="经典T字头反绒皮拼接网面舒适透气超轻休闲鞋" data-id="146923" class="drag_img ui-draggable"></a>
+  </li>
+    <li>
+    <a href="<?php echo Uri::create('search/create/?id=83266&url=http://msm2.cais.ntu.edu.sg/okbuyimgs/24c/c4d2dfa408a3efe022789a836a62a24c.jpg');?>">
+    	<img width="150" height="170" src="http://msm2.cais.ntu.edu.sg/okbuyimgs/24c/c4d2dfa408a3efe022789a836a62a24c.jpg" title="商履精英优质牛皮华丽百搭系带商务休闲鞋" data-id="83266" class="drag_img ui-draggable"></a>
+  </li>
+    <li>
+    <a href="<?php echo Uri::create('search/create/?id=170078&url=http://msm2.cais.ntu.edu.sg/okbuyimgs/e85/a9bb7f206b940a4cd4c5583b53244e85.jpg');?>">
+    	<img width="150" height="170" src="http://msm2.cais.ntu.edu.sg/okbuyimgs/e85/a9bb7f206b940a4cd4c5583b53244e85.jpg" title="清风系列透气排水网面户外溯溪鞋" data-id="170078" class="drag_img ui-draggable"></a>
+  </li>
+    <li>
+    <a href="<?php echo Uri::create('search/create/?id=121560&url=http://msm2.cais.ntu.edu.sg/okbuyimgs/6f0/7743259474f4e349ba0d36cfc35556f0.jpg');?>">
+    	<img width="150" height="170" src="http://msm2.cais.ntu.edu.sg/okbuyimgs/6f0/7743259474f4e349ba0d36cfc35556f0.jpg" title="1972纪念版活力透气孔耐磨牛皮中帮运动文化鞋" data-id="121560" class="drag_img ui-draggable"></a>
+  </li>
+    <li>
+    <a href="<?php echo Uri::create('search/create/?id=131465&url=http://msm2.cais.ntu.edu.sg/okbuyimgs/99f/90a2d369f46c46a4c2a3792310f8b99f.jpg');?>">
+    	<img width="150" height="170" src="http://msm2.cais.ntu.edu.sg/okbuyimgs/99f/90a2d369f46c46a4c2a3792310f8b99f.jpg" title="清风系列夏季层网结构鞋面灵活透气跑步文化鞋" data-id="131465" class="drag_img ui-draggable"></a>
+  </li>
+			
+            </ul>
+
+        </div>
+        <div class="slide">
+          <ul>
+
+<ul class="display_grid">
+    
+    <li>
+    <a href="<?php echo Uri::create('search/create/?id=121496&url=http://msm2.cais.ntu.edu.sg/okbuyimgs/b0d/d237a34c450cb851991a5d73ae054b0d.jpg');?>">
+    	<img width="150" height="170" src="http://msm2.cais.ntu.edu.sg/okbuyimgs/b0d/d237a34c450cb851991a5d73ae054b0d.jpg" title="质感绒面牛皮拼接防滑缓震低帮运动文化鞋板鞋" data-id="121496" class="drag_img ui-draggable"></a>
+  </li>
+    <li>
+    <a href="<?php echo Uri::create('search/create/?id=164380&url=http://msm2.cais.ntu.edu.sg/okbuyimgs/cb8/c3f89c696000c7dd01c9c80b087decb8.jpg');?>">
+    	<img width="150" height="170" src="http://msm2.cais.ntu.edu.sg/okbuyimgs/cb8/c3f89c696000c7dd01c9c80b087decb8.jpg" title="春夏新款清爽透气网面缓震低帮场下篮球鞋" data-id="164380" class="drag_img ui-draggable"></a>
+  </li>
+    <li>
+    <a href="<?php echo Uri::create('search/create/?id=161014&url=http://msm2.cais.ntu.edu.sg/okbuyimgs/7ca/6a4a787f0db25bbf43251d9a607957ca.jpg');?>">
+    	<img width="150" height="170" src="http://msm2.cais.ntu.edu.sg/okbuyimgs/7ca/6a4a787f0db25bbf43251d9a607957ca.jpg" title="Morgan炫酷迷彩冲孔牛皮休闲滑板鞋" data-id="161014" class="drag_img ui-draggable"></a>
+  </li>
+    <li>
+    <a href="<?php echo Uri::create('search/create/?id=170295&url=http://msm2.cais.ntu.edu.sg/okbuyimgs/99d/620bfa0cdf507fc9390b46ba2c8dc99d.jpg');?>">
+    	<img width="150" height="170" src="http://msm2.cais.ntu.edu.sg/okbuyimgs/99d/620bfa0cdf507fc9390b46ba2c8dc99d.jpg" title="时尚拼接网面加固鞋头稳定支撑科技止滑大底户外鞋" data-id="170295" class="drag_img ui-draggable"></a>
+  </li>
+    <li>
+    <a href="<?php echo Uri::create('search/create/?id=170175&url=http://msm2.cais.ntu.edu.sg/okbuyimgs/181/242fbe6997267b48a1bc5a5abc324181.jpg');?>">
+    	<img width="150" height="170" src="http://msm2.cais.ntu.edu.sg/okbuyimgs/181/242fbe6997267b48a1bc5a5abc324181.jpg" title="城际越野系列活力撞色科技系带柔软透气户外鞋" data-id="170175" class="drag_img ui-draggable"></a>
+  </li>
+
+   
+  </ul>
+			
+            </ul>
+
+        </div>
+		
+    </div>
+  </div>
+
+  
+</div>
+
+<div id="foot">
+  <p><?php echo __('footer.ntu') ?></p>
+  <ul>
+    <li>
+      <a href="<?php echo Uri::create('/p/about') ?>"><?php echo __('footer.about') ?></a>
+    </li>
+    <li>
+      <a href="mailto:chhoi@ntu.edu.sg"><?php echo __('footer.careers') ?></a>
+    </li>
+    <li>
+      <a href="mailto:chhoi@ntu.edu.sg"><?php echo __('footer.contact') ?></a>
+    </li>
+    <?php /*
+    <li>
+      <a href="<?php echo Uri::create('/p/api') ?>">API</a>
+    </li>
+    <li>
+      <a href="<?php echo Uri::create('/p/bookmarklet') ?>">Bookmarklet</a>
+    </li>
+{#	 */ ?>#}
+    <li>
+      <a href="{% comment %}<?php echo Uri::create('/p/disclaimer') ?>{% endcomment %}">{% comment %}<?php echo __('footer.copy') ?>{% endcomment %}</a>
+    </li>
+  </ul>
+</div>
+
+</div>
