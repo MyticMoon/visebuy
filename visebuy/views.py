@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.template.loader import get_template
 from django.template import Context
 from django.shortcuts import render
+import django
 
 #so it's because of the url has been set so it will decide which controller action will take care of the request
 def page(request):
