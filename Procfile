@@ -1,1 +1,1 @@
-web: python visebuy/manage.py runserver
+web: python visebuy/manage.py runserver --port $PORT
