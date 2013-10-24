@@ -135,6 +135,7 @@ INSTALLED_APPS = (
     'polls',
     'visebuy',
     'rest_framework',
+    'gunicorn',
 )
 
 REST_FRAMEWORK = {

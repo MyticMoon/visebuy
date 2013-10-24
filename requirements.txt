@@ -1,6 +1,5 @@
 Django==1.5.2
-PIL==1.1.7
-cloudinary==1.0.10
+gunicorn==0.17.2
 djangorestframework==2.3.8
 poster==0.8.2
 pycurl==7.19.0
