@@ -37,6 +37,7 @@
     <file path="/forms.py" changelist="e000c391-321a-4e86-b413-e11a77c00fd5" time="1380638641541" ignored="false" />
     <file path="/fragment.py" changelist="e000c391-321a-4e86-b413-e11a77c00fd5" time="1382415613795" ignored="false" />
     <file path="/requirements.txt" changelist="e000c391-321a-4e86-b413-e11a77c00fd5" time="1382415633165" ignored="false" />
+    <file path="$PROJECT_DIR$/../python-django-example-app/mysite/urls.py" changelist="e000c391-321a-4e86-b413-e11a77c00fd5" time="1382607625114" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
