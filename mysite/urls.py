@@ -27,5 +27,6 @@ urlpatterns = patterns('',
     # url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
     #because we using the viewsets instead of views, we can automatically generate
     #the URL conf for our API, by simply registering the viewsets with a router class
-
 )
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+urlpatterns += staticfiles_urlpatterns()
