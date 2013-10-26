@@ -8,5 +8,6 @@ urlpatterns = patterns('',
     url(r'^base/$', views.base, name='base'),
     url(r'^page/(?P<offset>.*)/$', views.detailpage, name='detailpage'),
     url(r'^search/create/$', search_handle.search),
-    url(r'^searchimageurl/$', search_handle.search_by_imageurl)
+    url(r'^searchimageurl/$', search_handle.search_by_imageurl),
+    url(r'^searchproductid/$', search_handle.search_by_productid)
 )

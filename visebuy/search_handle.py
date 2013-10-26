@@ -4,7 +4,7 @@ import md5
 import pycurl
 import urllib
 from django.views.decorators.csrf import csrf_exempt
-import xmltodict
+import xmltodict,json
 import cStringIO
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template.loader import get_template
@@ -28,9 +28,32 @@ def search_by_imageurl(request):
         c.setopt(c.CONNECTTIMEOUT, 10)
         c.perform()
         value = buf.getvalue()
+        json_file = convert_xml_to_json(value)
         buf.close()
-        return HttpResponse(value)
+        return HttpResponse(json_file)
     return HttpResponse("Invalid search request from client")
+
+@csrf_exempt
+def search_by_productid(request):
+    if request.method == "POST":
+        buf = cStringIO.StringIO()
+        c = pycurl.Curl()
+        product_id = request.POST['productid']
+        full_curl = str('http://msm.cais.ntu.edu.sg:8295/dmserver/svc4?pid='+product_id)
+        c.setopt(c.URL, full_curl)
+        c.setopt(c.WRITEFUNCTION, buf.write)
+        c.setopt(c.CONNECTTIMEOUT, 10)
+        c.perform()
+        value = buf.getvalue()
+        json_file = convert_xml_to_json(value)
+        buf.close()
+        return HttpResponse(json_file)
+    return HttpResponse("Invalid product id search request")
+
+def convert_xml_to_json(xml_file):
+    xmldict = xmltodict.parse(xml_file)
+    json_file = json.dumps(xmldict)
+    return json_file
 
 def search(request):
     buf = cStringIO.StringIO()
