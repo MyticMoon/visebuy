@@ -27,6 +27,14 @@ def detailpage(request, offset):
         }
     )
 
+#start writing the demos to use the API
+
+def demo_homepage(request):
+    return render(request, 'visebuy/demo_search/demo_home.html')
+
+def demo_searchpage(request):
+    return render(request, 'visebuy/demo_search/demo_search.html')
+
 def search_handle(request):
     ab = "abc"
     return HttpResponse('correctly')
