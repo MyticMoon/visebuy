@@ -1,6 +1,6 @@
 Django==1.5.2
 gunicorn>=0.17.2
 djangorestframework==2.3.8
-poster==0.8.2
+poste>=0.8.2
 pycurl==7.19.0
 xmltodict==0.7.0
