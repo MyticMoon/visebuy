@@ -49,6 +49,14 @@
             text-align:center;
         }
     </style>
+    <link rel="stylesheet" type="text/css" href="{% static "css/colorbox.css" %}" />
+    <script src="{% static "js/jquery.colorbox-min.js" %}"></script>
+    <script>
+        $(document).ready(function(){
+            $(".product_detail").colorbox({iframe:true, width:"80%", height:"90%"});
+        });
+    </script>
+
     <script>
         $(document).ready(function(){
           $("#searchButton2").click(function(){
@@ -88,7 +96,7 @@
                 for (var i = 0; i<=8; i++) {
                     var product = '<li class="span3">'
                         +'<div class="thumbnail">'
-                        +'<a href="product_details.html"><img src="http:\/\/msm2.cais.ntu.edu.sg\/okbuyimgs\/' + products[i].ProductImage +'"'+ 'alt=""\/><\/a>'
+                        +'<a class="product_detail" href="/visebuy/demoproductpage"><img src="http:\/\/msm2.cais.ntu.edu.sg\/okbuyimgs\/' + products[i].ProductImage +'"'+ 'alt=""\/><\/a>'
                         +'<div class="caption">'
 {#                        +"<h5>Manicure &amp; Pedicure<\/h5>"#}
                         +"<h5>"+products[i].ProductName+"<\/h5>"
@@ -102,6 +110,7 @@
                 $("#productsList").append(product);
                 }
             }
+            $(".product_detail").colorbox({iframe:true, width:"80%", height:"90%"});
 {#            var product = "<li class=\"span3\">"#}
 {#			    +"<div class=\"thumbnail\">"#}
 {#				+"<a href=\"product_details.html\"><img src=\"\/static\/themes\/images\/products\/panasonic.jpg\" alt=\"\"/></a>"#}
@@ -116,6 +125,7 @@
 {#			    +"<\/li>";#}
 {#            $("#productsList").prepend(product);#}
         }
+
     </script>
 </head>
 <body>
@@ -153,7 +163,12 @@
     <a class="brand" href="index.html"><img src="{% static "themes/images/logo.png" %}" alt="Bootsshop"/></a>
 		<form class="form-inline navbar-search" {% comment %}method="post"{% endcomment %} {% comment %}action="products.html"{% endcomment %} >
 		<input id="srchFld" class="srchTxt" type="text" />
-		  <select class="srchTxt">
+
+{#        <input type="image" src="{% static "img/search.png" %}" width="100" height="34" alt="??" border="0">#}
+        <img src="{% static "img/camera.png" %}" title="camera" alt="camera" width="20" height="14" id="campan">
+{#        <p id="camera_tips" class="tips">???????</p>#}
+
+		<select class="srchTxt">
 			<option>All</option>
 			<option>CLOTHES </option>
 			<option>FOOD AND BEVERAGES </option>

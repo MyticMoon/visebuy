@@ -13,5 +13,6 @@ urlpatterns = patterns('',
     url(r'^searchbyimage/$', search_handle.search_by_image),
     url(r'^demohome/$', views.demo_homepage),
     url(r'^demosearch/$', views.demo_searchpage),
+    url(r'^demoproductpage', views.demo_productdetailpage),
 
 )
