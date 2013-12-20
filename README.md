@@ -13,3 +13,9 @@ Things to do next:
     c) Search by category
         - Add in category (refer to old code)
 3) Indexing and searching using a new API
+
+
+=========
+1) Provide a fake API for Shu Qi
+2) Deploy text search server on Azure
+3) Deploy vise buy and SQL database to another Azure server
