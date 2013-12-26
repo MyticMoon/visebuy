@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 from itertools import count
-import md5
 import pycurl
 import urllib
 from django.views.decorators.csrf import csrf_exempt
-import xmltodict, json
+import xmltodict
+import json
 import cStringIO
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template.loader import get_template
@@ -12,6 +12,7 @@ from django.template import Context
 from django.shortcuts import render
 import tempfile
 import shutil
+import os.path
 
 products = None
 dm_server = "http://msm.cais.ntu.edu.sg:8295/dmserver/"
@@ -24,17 +25,23 @@ def search_by_imageurl(request):
         buf = cStringIO.StringIO()
         c = pycurl.Curl()
         imageurl = request.POST['imageurl']
-        full_curl = str('http://msm.cais.ntu.edu.sg:8295/dmserver/svc3?data='+imageurl+'&servFlag=0&svcFlag=1&modFlag=0')
-        c.setopt(c.URL, full_curl)
-        c.setopt(c.WRITEFUNCTION, buf.write)
-        c.setopt(c.CONNECTTIMEOUT, 10)
-        #we can connect to NTU virtual private network via a proxy
-        #c.setopt(c.PROXY, 'http://inthemiddle.com:8080')
-        c.perform()
-        value = buf.getvalue()
-        json_file = convert_xml_to_json(value)
-        buf.close()
-        return HttpResponse(json_file)
+        # full_curl = str('http://msm.cais.ntu.edu.sg:8295/dmserver/svc3?data='+imageurl+'&servFlag=0&svcFlag=1&modFlag=0')
+        # c.setopt(c.URL, full_curl)
+        # c.setopt(c.WRITEFUNCTION, buf.write)
+        # c.setopt(c.CONNECTTIMEOUT, 10)
+        #     #we can connect to NTU virtual private network via a proxy
+        #     #c.setopt(c.PROXY, 'http://inthemiddle.com:8080')
+        # c.perform()
+        # value = buf.getvalue()
+        # json_file = convert_xml_to_json(value)
+        # buf.close()
+        BASE = os.path.dirname(os.path.abspath(__file__))
+        #json_data = open(os.path.join(BASE, '\\static\\json\\image_url.json'))
+        json_data = open(BASE+'\\static\\json\\image_url.json')
+        data1 = json.load(json_data)
+        data2 = json.dumps(data1)
+        #json_data.close()
+        return HttpResponse(data2)
     return HttpResponse("Invalid search request from client")
 
 @csrf_exempt
@@ -43,15 +50,23 @@ def search_by_productid(request):
         buf = cStringIO.StringIO()
         c = pycurl.Curl()
         product_id = request.POST['productid']
-        full_curl = str('http://msm.cais.ntu.edu.sg:8295/dmserver/svc4?pid='+product_id)
-        c.setopt(c.URL, full_curl)
-        c.setopt(c.WRITEFUNCTION, buf.write)
-        c.setopt(c.CONNECTTIMEOUT, 10)
-        c.perform()
-        value = buf.getvalue()
-        json_file = convert_xml_to_json(value)
-        buf.close()
-        return HttpResponse(json_file)
+        # full_curl = str('http://msm.cais.ntu.edu.sg:8295/dmserver/svc4?pid='+product_id)
+        # c.setopt(c.URL, full_curl)
+        # c.setopt(c.WRITEFUNCTION, buf.write)
+        # c.setopt(c.CONNECTTIMEOUT, 10)
+        # c.perform()
+        # value = buf.getvalue()
+        # json_file = convert_xml_to_json(value)
+        # buf.close()
+        # return HttpResponse(json_file)
+        BASE = os.path.dirname(os.path.abspath(__file__))
+        #json_data = open(os.path.join(BASE, '\\static\\json\\image_url.json'))
+        json_data = open(BASE+'\\static\\json\\product_id.json')
+        data1 = json.load(json_data)
+        data2 = json.dumps(data1)
+        #json_data.close()
+        return HttpResponse(data2)
+
     return HttpResponse("Invalid product id search request")
 
 @csrf_exempt
@@ -61,24 +76,31 @@ def search_by_image(request):
         if request.FILES['file'] is not None:
             image_file = request.FILES['file']
             #need to handle all the temp files like delete after upload, and check the suffix
-            fd, filepath = tempfile.mkstemp(suffix='.jpg', prefix=image_file.name, dir=FILE_UPLOAD_DIR)
-            with open(filepath, 'wb') as dest:
-                shutil.copyfileobj(image_file, dest)
-            c = pycurl.Curl()
-            buf = cStringIO.StringIO()
-            target_curl = dm_server+'svc3'
-            c.setopt(c.URL, target_curl)
-            c.setopt(c.WRITEFUNCTION, buf.write)
-            c.setopt(c.CONNECTTIMEOUT, 10)
-            #data = [('file', (c.FORM_FILE, 'Z:\FYP working\shoe.jpg')), ('modFlag', '0'), ('servFlag', '0')]
-            data = [('file', (c.FORM_FILE, str(filepath))), ('modFlag', '0'), ('servFlag', '0')]
-            c.setopt(c.HTTPPOST, data)
-            c.setopt(c.VERBOSE, True)
-            c.perform()
-            value = buf.getvalue()
-            json_file = convert_xml_to_json(value)
-            buf.close()
-            return HttpResponse(json_file)
+            # fd, filepath = tempfile.mkstemp(suffix='.jpg', prefix=image_file.name, dir=FILE_UPLOAD_DIR)
+            # with open(filepath, 'wb') as dest:
+            #     shutil.copyfileobj(image_file, dest)
+            # c = pycurl.Curl()
+            # buf = cStringIO.StringIO()
+            # target_curl = dm_server+'svc3'
+            # c.setopt(c.URL, target_curl)
+            # c.setopt(c.WRITEFUNCTION, buf.write)
+            # c.setopt(c.CONNECTTIMEOUT, 10)
+            # #data = [('file', (c.FORM_FILE, 'Z:\FYP working\shoe.jpg')), ('modFlag', '0'), ('servFlag', '0')]
+            # data = [('file', (c.FORM_FILE, str(filepath))), ('modFlag', '0'), ('servFlag', '0')]
+            # c.setopt(c.HTTPPOST, data)
+            # c.setopt(c.VERBOSE, True)
+            # c.perform()
+            # value = buf.getvalue()
+            # json_file = convert_xml_to_json(value)
+            # buf.close()
+            # return HttpResponse(json_file)
+            BASE = os.path.dirname(os.path.abspath(__file__))
+            #json_data = open(os.path.join(BASE, '\\static\\json\\image_url.json'))
+            json_data = open(BASE+'\\static\\json\\Upload_image.json')
+            data1 = json.load(json_data)
+            data2 = json.dumps(data1)
+            #json_data.close()
+            return HttpResponse(data2)
         return HttpResponse("Can't find image content")
     return HttpResponse("Invalid image search request")
 

@@ -1,6 +1,23 @@
 visebuy
 =======
 
+1) The Shoes_DB has been uploaded to local/shoes_db
+address: localhost:3306
+username: root
+password: root
+using command
+
+mysql> use DATABASE_NAME;
+mysql> source path/to/file.sql;
+
+but the text search needs to be deloyed online -> the database also needs to be deployed online
+
+2) Next:
+Install mysql on unix server
+Deploy .sql file
+Set up text search server
+
+
 visebuy project
 
 Things to do next:

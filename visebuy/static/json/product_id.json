@@ -1,0 +1,67 @@
+{
+    "Result": {
+        "ResultType": "productdetails",
+        "Output": {
+            "Product": {
+                "ProductID": "11029",
+                "ProductName": "圆头套脚牛皮简约正装鞋",
+                "ProductPrice": "169.00",
+                "ProductDesc": "圆头套脚牛皮简约正装鞋",
+                "ProductURL": "/SUOLIAO-%E7%B4%A2%E9%87%8C%E5%A5%A5-%E6%AD%A3%E8%A3%85%E9%9E%8B-%E5%9C%86%E5%A4%B4%E5%A5%97%E8%84%9A%E7%89%9B%E7%9A%AE%E7%AE%80%E7%BA%A6%E6%AD%A3%E8%A3%85%E9%9E%8B-%E9%BB%91%E8%89%B2-52301/shoe-17006084.html",
+                "ProductBrand": "索里奥",
+                "ProductMerchant": "索里奥品牌店",
+                "ProductColor": "黑色",
+                "CatID": "165",
+                "CatName": "正装鞋",
+                "ProductImage": {
+                    "PrimaryImage": "084/17006084_1.jpg:88385",
+                    "VariantImage": [
+                        "084/17006084_4.jpg:88388",
+                        "084/17006084_5.jpg:88389",
+                        "084/17006084_6.jpg:88390",
+                        "084/17006084_7.jpg:88391",
+                        "084/17006084_8.jpg:88392",
+                        "084/17006084_2.jpg:88386",
+                        "084/17006084_3.jpg:88387"
+                    ]
+                },
+                "Recommendation": {
+                    "RecommendProduct": [
+                        {
+                            "ProductID": "10948",
+                            "ProductName": "欧版时尚冲孔雕花牛皮系带商务正装皮鞋",
+                            "ProductPrice": "379.00",
+                            "CatID": "165",
+                            "ProductImage": "312/16948312_1.jpg",
+                            "ProductImageID": "87737"
+                        },
+                        {
+                            "ProductID": "10949",
+                            "ProductName": "英伦时尚尖头系带牛皮商务正装鞋",
+                            "ProductPrice": "328.00",
+                            "CatID": "165",
+                            "ProductImage": "915/16962915_1.jpg",
+                            "ProductImageID": "87745"
+                        },
+                        {
+                            "ProductID": "10950",
+                            "ProductName": "舒适系带牛皮休闲正装鞋",
+                            "ProductPrice": "339.00",
+                            "CatID": "165",
+                            "ProductImage": "009/16924009_1.jpg",
+                            "ProductImageID": "87753"
+                        },
+                        {
+                            "ProductID": "10951",
+                            "ProductName": "商务经典牛皮正装休闲鞋",
+                            "ProductPrice": "328.00",
+                            "CatID": "165",
+                            "ProductImage": "922/16962922_1.jpg",
+                            "ProductImageID": "87761"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
