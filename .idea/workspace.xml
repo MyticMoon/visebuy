@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e000c391-321a-4e86-b413-e11a77c00fd5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/visebuy/static/json/Upload_image.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/visebuy/static/json/image_url.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/visebuy/static/json/product_id.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/visebuy/search_handle.py" afterPath="$PROJECT_DIR$/visebuy/search_handle.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="633d73a2-90d8-4f66-bcd1-cfe63a863a92" name="Never commit" comment="Never commit" />
     <ignored path="mysite.iws" />
@@ -73,7 +68,7 @@
       <file leaf-file-name="search_handle.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/visebuy/search_handle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="0" selection-start="2697" selection-end="2697" vertical-scroll-proportion="0.33242506">
+            <state line="31" column="52" selection-start="1075" selection-end="1075" vertical-scroll-proportion="-0.9182561">
               <folding>
                 <element signature="e#24#51#0" expanded="true" />
               </folding>
@@ -693,7 +688,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/visebuy/search_handle.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="0" selection-start="2697" selection-end="2697" vertical-scroll-proportion="0.33242506">
+        <state line="31" column="52" selection-start="1075" selection-end="1075" vertical-scroll-proportion="-0.9182561">
           <folding>
             <element signature="e#24#51#0" expanded="true" />
           </folding>
